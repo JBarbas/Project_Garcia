@@ -64,6 +64,8 @@
     <Compile Include="Assets\Scripts\caminarScript.cs" />
     <Compile Include="Assets\Scripts\ControlCamara.cs" />
     <Compile Include="Assets\Scripts\dirCadera.cs" />
+    <Compile Include="Assets\Scripts\dirPelvis.cs" />
+    <Compile Include="Assets\Scripts\FollowChild.cs" />
     <Compile Include="Assets\Scripts\piernasmov.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/Documentos 2TB/node-v8.12.0-win-x64/GitHub/Project_Garcia/ragdoll_prueba/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -71,11 +73,11 @@
     <Reference Include="Unity.PackageManagerUI.Editor">
       <HintPath>D:/Documentos 2TB/node-v8.12.0-win-x64/GitHub/Project_Garcia/ragdoll_prueba/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/Documentos 2TB/node-v8.12.0-win-x64/GitHub/Project_Garcia/ragdoll_prueba/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>D:/Documentos 2TB/node-v8.12.0-win-x64/GitHub/Project_Garcia/ragdoll_prueba/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>D:/Documentos 2TB/node-v8.12.0-win-x64/GitHub/Project_Garcia/ragdoll_prueba/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
       <HintPath>D:/Documentos 2TB/node-v8.12.0-win-x64/GitHub/Project_Garcia/ragdoll_prueba/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
