@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class caminarScript : MonoBehaviour {
 
@@ -20,5 +21,6 @@ public class caminarScript : MonoBehaviour {
             this.GetComponent<Animator>().ResetTrigger("caminar");
             this.GetComponent<Animator>().SetTrigger("parar");
         }
+
     }
 }
