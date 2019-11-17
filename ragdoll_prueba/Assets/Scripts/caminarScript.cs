@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class caminarScript : MonoBehaviour {
 
+    private bool moveFront = false;
+    private bool moveLeft = false;
+    private bool moveBack = false;
+    private bool  moveRight = false;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -13,9 +18,42 @@ public class caminarScript : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyDown("w"))
         {
-            this.GetComponent<Animator>().SetTrigger("caminar");
+            moveFront = true;
         }
         else if (Input.GetKeyUp("w"))
+        {
+            moveFront = false;
+        }
+        if (Input.GetKeyDown("a"))
+        {
+            moveLeft = true;
+        }
+        else if (Input.GetKeyUp("a"))
+        {
+            moveLeft = false;
+        }
+        if (Input.GetKeyDown("s"))
+        {
+            moveBack = true;
+        }
+        else if (Input.GetKeyUp("s"))
+        {
+            moveBack = false;
+        }
+        if (Input.GetKeyDown("d"))
+        {
+            moveRight = true;
+        }
+        else if (Input.GetKeyUp("d"))
+        {
+            moveRight = false;
+        }
+
+        if (moveFront || moveLeft || moveBack || moveRight)
+        {
+            this.GetComponent<Animator>().SetTrigger("caminar");
+        }
+        else
         {
             this.GetComponent<Animator>().ResetTrigger("caminar");
             this.GetComponent<Animator>().SetTrigger("parar");

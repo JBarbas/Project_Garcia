@@ -20,6 +20,10 @@ public class dirPelvis : MonoBehaviour
     private bool jumping = false;
     private bool running = false;
     private Vector3 origin;
+    private bool moveFront = false;
+    private bool moveLeft = false;
+    private bool moveRight = false;
+    private bool moveBack = false;
 
     IEnumerator RotatePelvis(float targetRotation)
     {
@@ -46,36 +50,38 @@ public class dirPelvis : MonoBehaviour
     {
         float targetRotation = camera.transform.eulerAngles.y;
 
-        if (moving)
-        {
-            Vector3 currentPos = transform.position;
-            transform.position = origin;
-            
-            if (rotated)
-            {
-                //parent.transform.rotation = Quaternion.Euler(-90, targetRotation, 0);
-                Quaternion desiredRotation = Quaternion.Euler(-90, targetRotation-180, 0);
-                parent.transform.rotation = Quaternion.Lerp(parent.transform.rotation, desiredRotation, Time.deltaTime * rotationSpeed);
-                //parent.transform.Rotate(0, 0, 180, Space.Self);
-            }
-            transform.position = currentPos;
-        }
-
         if (Input.GetKeyDown("w"))
         {
-            if(!moving)
-            {
-                //StartCoroutine(RotatePelvis(targetRotation-180));
-            }
-            moving = true;
-            rotated = true;
+            moveFront = true;
         }
         else if (Input.GetKeyUp("w"))
         {
-            moving = false;
-            rotated = false;
+            moveFront = false;
         }
-
+        if (Input.GetKeyDown("a"))
+        {
+            moveLeft = true;
+        }
+        else if (Input.GetKeyUp("a"))
+        {
+            moveLeft = false;
+        }
+        if (Input.GetKeyDown("s"))
+        {
+            moveBack = true;
+        }
+        else if (Input.GetKeyUp("s"))
+        {
+            moveBack = false;
+        }
+        if (Input.GetKeyDown("d"))
+        {
+            moveRight = true;
+        }
+        else if (Input.GetKeyUp("d"))
+        {
+            moveRight = false;
+        }
         if (Input.GetKeyDown("space") && !jumping)
         {
             jumping = true;
@@ -88,6 +94,30 @@ public class dirPelvis : MonoBehaviour
         else if (Input.GetKeyUp("left shift"))
         {
             running = false;
+        }
+
+        float direction = 0;
+        if (moveBack) direction = 180;
+        if (moveLeft)
+        {
+            direction += -90;
+            if (moveFront) direction += 45;
+            if (moveBack) direction += 135;
+        }
+        if (moveRight)
+        {
+            direction += 90;
+            if (moveFront) direction += -45;
+            if (moveBack) direction += -135;
+        }
+
+        if (moveFront || moveLeft || moveBack || moveRight)
+        {
+            Vector3 currentPos = transform.position;
+            transform.position = origin;
+            Quaternion desiredRotation = Quaternion.Euler(-90, targetRotation-180+direction, 0);
+            parent.transform.rotation = Quaternion.Lerp(parent.transform.rotation, desiredRotation, Time.deltaTime * rotationSpeed);
+            transform.position = currentPos;
         }
     }
 
