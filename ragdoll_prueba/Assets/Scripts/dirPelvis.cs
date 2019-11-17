@@ -127,7 +127,7 @@ public class dirPelvis : MonoBehaviour
         {
             rb.AddForce(new Vector3(-transform.forward.x, 0, -transform.forward.z) * runSpeed);
         }
-        else if (moving)
+        else if (moveFront || moveLeft || moveBack || moveRight)
         {
             rb.AddForce(new Vector3(-transform.forward.x, 0, -transform.forward.z) * walkSpeed);
         }
