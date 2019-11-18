@@ -22,6 +22,7 @@ public class CameraFollow : MonoBehaviour {
 	public float smoothY;
 	private float rotY = 0.0f;
 	private float rotX = 0.0f;
+    public bool state = false;
 
 
 
@@ -54,7 +55,25 @@ public class CameraFollow : MonoBehaviour {
 		transform.rotation = localRotation;
 
 
-	}
+        Transform target = CameraFollowObj.transform;
+
+        Transform targetPlayer = PlayerObj.transform;
+        if (Input.GetKeyDown("l"))
+        {
+            transform.position = new Vector3(0,0,-15) + targetPlayer.position;
+            //Quaternion desiredRotation = Quaternion.Euler(0,180,0);
+            //transform.rotation = Quaternion.Lerp(transform.rotation,desiredRotation,Time.deltaTime * 15.0f);  //Cambiar 15 por variable
+            transform.LookAt(targetPlayer);
+            state = true;
+        }
+
+        if (Input.GetKeyDown("r"))
+        {
+            state = true;
+        }
+
+
+    }
 
 	void LateUpdate () {
 		CameraUpdater ();
@@ -64,8 +83,17 @@ public class CameraFollow : MonoBehaviour {
 		// set the target object to follow
 		Transform target = CameraFollowObj.transform;
 
-		//move towards the game object that is the target
-		float step = CameraMoveSpeed * Time.deltaTime;
-		transform.position = Vector3.MoveTowards (transform.position, target.position, step);
+        if (state)
+        {
+
+        }
+        else
+        {
+            //move towards the game object that is the target
+            float step = CameraMoveSpeed * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+        }
+
+
 	}
 }
