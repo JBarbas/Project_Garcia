@@ -60,7 +60,8 @@ public class PlayerController : MonoBehaviour
         {
             case "patrullando":
 
-                if (player.transform.position.x == nextPoint.position.x && player.transform.position.z == nextPoint.position.z)
+                if (player.transform.position.x == nextPoint.position.x 
+                    && player.transform.position.z == nextPoint.position.z)
                 {
 
                     if (actualPoint < target.childCount - 1)
