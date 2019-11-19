@@ -4,29 +4,30 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(CharacterController))]
-public class PlayerController : MonoBehaviour
+public class SecurityController : MonoBehaviour
 {
     public bool debugMode = false;
     /*state = ["patrullando", "persiguiendo", "buscando"]*/
     public string state = "patrullando";
     public Vector3 lastPosPlayer;
     public float speed = 3.0F;
+    public float chaseSpeed = 5.0f;
     public float rotateSpeed = 1.5F;
     public Transform target;
     public Transform nextPoint;
     public int actualPoint = 0; //waypoint actual
-    public GameObject player;
+    public GameObject security;
     NavMeshAgent _agent;    
 
     void Start()
     {
         
-        if (player == null)
+        if (security == null)
         {
-            player = this.gameObject;
+            security = this.gameObject;
         }
         _agent = this.GetComponent<NavMeshAgent>();
-
+        _agent.speed = speed;
         /*Asignamos el primer punto de su patrulla*/
         nextPoint = target.GetChild(actualPoint);
         transform.Rotate(new Vector3(nextPoint.position.x, 0, nextPoint.position.z));
@@ -60,8 +61,8 @@ public class PlayerController : MonoBehaviour
         {
             case "patrullando":
 
-                if (player.transform.position.x == nextPoint.position.x 
-                    && player.transform.position.z == nextPoint.position.z)
+                if (security.transform.position.x == nextPoint.position.x 
+                    && security.transform.position.z == nextPoint.position.z)
                 {
 
                     if (actualPoint < target.childCount - 1)
@@ -79,6 +80,7 @@ public class PlayerController : MonoBehaviour
 
                     nextPoint = target.GetChild(actualPoint);
                 }
+                _agent.speed = speed;
                 transform.Rotate(new Vector3(nextPoint.position.x, 0, nextPoint.position.z));
                 _agent.SetDestination(new Vector3(nextPoint.position.x, 0, nextPoint.position.z));
                 break;
@@ -90,6 +92,7 @@ public class PlayerController : MonoBehaviour
                     Debug.Log("persigue");
                 }
 
+                _agent.speed = chaseSpeed;
                 transform.Rotate(lastPosPlayer);
                 _agent.SetDestination(lastPosPlayer);
                 break;
