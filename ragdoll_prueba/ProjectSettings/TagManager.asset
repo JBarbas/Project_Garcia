@@ -9,6 +9,7 @@ TagManager:
   - Wall
   - Cono de vision
   - ground
+  - DuckSpawner
   layers:
   - Default
   - TransparentFX
