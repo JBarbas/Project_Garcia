@@ -73,6 +73,8 @@
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\CameraFollowMario.cs" />
     <Compile Include="Assets\Scripts\ControlCamara.cs" />
+    <Compile Include="Assets\Scripts\Duck Scripts\DuckBehaviour.cs" />
+    <Compile Include="Assets\Scripts\Duck Scripts\DuckGenerator.cs" />
     <Compile Include="Assets\Scripts\IA Guardia\pelvisController.cs" />
     <Compile Include="Assets\Scripts\IA Guardia\SecurityController.cs" />
     <Compile Include="Assets\Scripts\IA Guardia\Visor.cs" />
