@@ -10,8 +10,8 @@ public class SecurityController : MonoBehaviour
     /*state = ["patrullando", "persiguiendo", "buscando"]*/
     public string state = "patrullando";
     public Vector3 lastPosPlayer;
-    public float speed = 3.0F;
-    public float chaseSpeed = 5.0f;
+    public float speed = 0.0F;
+    public float chaseSpeed = 0.0f;
     public float rotateSpeed = 1.5F;
     public Transform target;
     public Transform nextPoint;
@@ -30,7 +30,7 @@ public class SecurityController : MonoBehaviour
         _agent.speed = speed;
         /*Asignamos el primer punto de su patrulla*/
         nextPoint = target.GetChild(actualPoint);
-        transform.Rotate(new Vector3(nextPoint.position.x, 0, nextPoint.position.z));
+        transform.LookAt(new Vector3(nextPoint.position.x, 0, nextPoint.position.z));
         _agent.SetDestination(new Vector3(nextPoint.position.x, 0, nextPoint.position.z));
     }
 
@@ -81,7 +81,7 @@ public class SecurityController : MonoBehaviour
                     nextPoint = target.GetChild(actualPoint);
                 }
                 _agent.speed = speed;
-                transform.Rotate(new Vector3(nextPoint.position.x, 0, nextPoint.position.z));
+                transform.LookAt(new Vector3(nextPoint.position.x, 0, nextPoint.position.z));
                 _agent.SetDestination(new Vector3(nextPoint.position.x, 0, nextPoint.position.z));
                 break;
 
@@ -93,7 +93,9 @@ public class SecurityController : MonoBehaviour
                 }
 
                 _agent.speed = chaseSpeed;
-                transform.Rotate(lastPosPlayer);
+                //transform.Rotate(new Vector3(0, lastPosPlayer.y, 0));
+                //transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, lastPosPlayer.y, 0), Time.deltaTime * rotateSpeed);
+                transform.LookAt(new Vector3(lastPosPlayer.x, 0, lastPosPlayer.z));
                 _agent.SetDestination(lastPosPlayer);
                 break;
 
