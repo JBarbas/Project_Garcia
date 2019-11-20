@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Agent Garcia\Agacharse.cs" />
     <Compile Include="Assets\Scripts\Agent Garcia\caminarScript.cs" />
     <Compile Include="Assets\Scripts\Agent Garcia\dirCadera.cs" />
     <Compile Include="Assets\Scripts\Agent Garcia\dirPelvis.cs" />
@@ -80,9 +81,8 @@
     <Compile Include="Assets\Scripts\IA Guardia\Visor.cs" />
     <Compile Include="Assets\Scripts\IA Guardia\wasdMove.cs" />
     <Compile Include="Assets\Scripts\IA Guardia\waypoint.cs" />
-    <Compile Include="Assets\Scripts\SwitchCamera.cs" />
     <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
-      <HintPath>C:/Users/Mario-PC/Desktop/Project_Garcia/ragdoll_prueba/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
+      <HintPath>D:/Documentos 2TB/node-v8.12.0-win-x64/GitHub/Project_Garcia/ragdoll_prueba/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Mario-PC/Desktop/Project_Garcia/ragdoll_prueba/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -96,11 +96,14 @@
     <Reference Include="Unity.ProBuilder.AddOns.Editor">
       <HintPath>C:/Users/Mario-PC/Desktop/Project_Garcia/ragdoll_prueba/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.ProBuilder.AddOns.Editor">
+      <HintPath>D:/Documentos 2TB/node-v8.12.0-win-x64/GitHub/Project_Garcia/ragdoll_prueba/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>C:/Users/Mario-PC/Desktop/Project_Garcia/ragdoll_prueba/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/Mario-PC/Desktop/Project_Garcia/ragdoll_prueba/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>D:/Documentos 2TB/node-v8.12.0-win-x64/GitHub/Project_Garcia/ragdoll_prueba/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -131,6 +134,12 @@
     </Reference>
     <Reference Include="UnityEngine.ClusterRendererModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>D:/Program files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>D:/Program files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
@@ -187,7 +196,7 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SharedInternalsModule">
-      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll</HintPath>
+      <HintPath>D:/Program files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpriteMaskModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll</HintPath>
@@ -271,7 +280,7 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VehiclesModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VideoModule">
-      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll</HintPath>
+      <HintPath>D:/Program files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.WindModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>

@@ -6,9 +6,14 @@ public class LeftHand : MonoBehaviour
 {
     public float force = 4000;
     public Transform arm;
+    public Transform player;
+    public Transform camera;
+    public float throwingForce = 100;
     Rigidbody rb;
     private bool holding = false;
     private bool canHold = false;
+
+    public float dir;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +23,7 @@ public class LeftHand : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("holding: " + holding + ", canHold: " + canHold);
         if (!holding && canHold)
         {
             SpringJoint sp = gameObject.AddComponent<SpringJoint>();
@@ -50,13 +56,23 @@ public class LeftHand : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Input.GetMouseButtonDown(0))
+        float dirY = camera.transform.eulerAngles.x;
+        if (dirY > 90) dirY = 0;
+        dir = dirY / 30;
+        if (Input.GetMouseButton(0))
         {
             canHold = true;
         }
-        else if (Input.GetMouseButtonUp(0))
+        else
         {
             canHold = false;
+        }
+        if (Input.GetKeyDown("q") && this.GetComponent<SpringJoint>() != null)
+        {
+            SpringJoint sj = this.GetComponent<SpringJoint>();
+            Rigidbody holdingObject = sj.connectedBody;
+            Destroy(this.GetComponent<SpringJoint>());
+            holdingObject.AddForce(new Vector3(-player.forward.x, dir, -player.forward.z) * throwingForce, ForceMode.Impulse);
         }
     }
 }
