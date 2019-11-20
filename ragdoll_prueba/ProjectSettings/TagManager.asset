@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Agent Garcia
+  - Security
+  - Wall
+  - Cono de vision
+  - ground
+  - DuckSpawner
   layers:
   - Default
   - TransparentFX
