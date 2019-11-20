@@ -5303,6 +5303,7 @@ GameObject:
   - component: {fileID: 2106633121}
   - component: {fileID: 2106633122}
   - component: {fileID: 2106633123}
+  - component: {fileID: 1563938788}
   m_Layer: 9
   m_Name: pecho
   m_TagString: Agent Garcia
@@ -5326,6 +5327,19 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!114 &1563938788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563938786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8382bd29ed354e543876ddb424cf01f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agachado: 0
 --- !u!1 &1563938790
 GameObject:
   m_ObjectHideFlags: 0
