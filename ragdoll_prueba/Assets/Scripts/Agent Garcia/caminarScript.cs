@@ -48,14 +48,6 @@ public class caminarScript : MonoBehaviour {
         {
             moveRight = false;
         }
-        if (Input.GetKeyDown("left shift"))
-        {
-            this.GetComponent<Animator>().SetBool("correr", true);
-        }
-        else if (Input.GetKeyUp("left shift"))
-        {
-            this.GetComponent<Animator>().SetBool("correr", false);
-        }
 
         if (moveFront || moveLeft || moveBack || moveRight)
         {

@@ -1,4 +1,0 @@
-Crear un canvas en la jerarquía (UI)
-Crear en él un Text y una Image para la tarjeta
-El script InteractiveItem es una clase que servirá de plantilla (Herencia)
-El script PickUp

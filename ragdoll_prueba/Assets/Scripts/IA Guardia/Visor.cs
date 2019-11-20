@@ -74,8 +74,8 @@ public class Visor : MonoBehaviour
                 Debug.Log("Raycast" + hit.collider.gameObject.tag);
             }
             if(hit.collider.gameObject.tag.Equals("Agent Garcia")){
-                agent.GetComponent<SecurityController>().state = "persiguiendo";
-                agent.GetComponent<SecurityController>().lastPosPlayer = targetPos;
+                agent.GetComponent<PlayerController>().state = "persiguiendo";
+                agent.GetComponent<PlayerController>().lastPosPlayer = targetPos;
             }   
         }
     }
@@ -84,7 +84,7 @@ public class Visor : MonoBehaviour
     {
         if(other.tag.Equals("Agent Garcia"))
         {
-            agent.GetComponent<SecurityController>().state = "buscando";
+            agent.GetComponent<PlayerController>().state = "buscando";
         }
     }
 }

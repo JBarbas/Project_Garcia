@@ -6,7 +6,7 @@ public class CameraFollowMario : MonoBehaviour {
 
 	public float CameraMoveSpeed = 120.0f;
 	public GameObject CameraFollowObj;
-    Vector3 FollowPOS;
+	Vector3 FollowPOS;
 	public float clampAngle = 80.0f;
 	public float inputSensitivity = 150.0f;
 	public GameObject CameraObj;
@@ -22,8 +22,6 @@ public class CameraFollowMario : MonoBehaviour {
 	public float smoothY;
 	private float rotY = 0.0f;
 	private float rotX = 0.0f;
-
-    private bool evento = false;
 
 
 
@@ -55,10 +53,8 @@ public class CameraFollowMario : MonoBehaviour {
 		Quaternion localRotation = Quaternion.Euler (rotX, rotY, 0.0f);
 		transform.rotation = localRotation;
 
-        
 
-
-    }
+	}
 
 	void LateUpdate () {
 		CameraUpdater ();
@@ -67,32 +63,9 @@ public class CameraFollowMario : MonoBehaviour {
 	void CameraUpdater() {
 		// set the target object to follow
 		Transform target = CameraFollowObj.transform;
-        Transform targetPlayer = PlayerObj.transform;
 
-        //move towards the game object that is the target
-        float step = CameraMoveSpeed * Time.deltaTime;
-
-        transform.position = Vector3.MoveTowards(transform.position, target.position, step);
-        /*if(!evento)
-            transform.position = Vector3.MoveTowards(transform.position, target.position, step);
-
-
-        if (Input.GetKeyDown("l") && evento)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, target.position, step);
-            evento = false;
-
-        }
-        else if(Input.GetKeyDown("l") && !evento)
-        {
-            transform.position = targetPlayer.position + new Vector3(-transform.forward.x, 0 , -transform.forward.z)*5;
-            evento = true;
-        }*/
-
-
-
-
-
-    }
-
+		//move towards the game object that is the target
+		float step = CameraMoveSpeed * Time.deltaTime;
+		transform.position = Vector3.MoveTowards (transform.position, target.position, step);
+	}
 }
