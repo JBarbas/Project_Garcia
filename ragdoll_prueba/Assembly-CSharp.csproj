@@ -65,12 +65,14 @@
     <Compile Include="Assets\Scripts\Agent Garcia\caminarScript.cs" />
     <Compile Include="Assets\Scripts\Agent Garcia\dirCadera.cs" />
     <Compile Include="Assets\Scripts\Agent Garcia\dirPelvis.cs" />
+    <Compile Include="Assets\Scripts\Agent Garcia\Feets.cs" />
     <Compile Include="Assets\Scripts\Agent Garcia\FollowChild.cs" />
     <Compile Include="Assets\Scripts\Agent Garcia\Hands.cs" />
     <Compile Include="Assets\Scripts\Agent Garcia\LeftHand.cs" />
     <Compile Include="Assets\Scripts\Agent Garcia\piernasmov.cs" />
     <Compile Include="Assets\Scripts\Agent Garcia\RightHand.cs" />
     <Compile Include="Assets\Scripts\CameraCollision.cs" />
+    <Compile Include="Assets\Scripts\CameraCollision2.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\CameraFollowMario.cs" />
     <Compile Include="Assets\Scripts\ControlCamara.cs" />
@@ -81,6 +83,11 @@
     <Compile Include="Assets\Scripts\IA Guardia\Visor.cs" />
     <Compile Include="Assets\Scripts\IA Guardia\wasdMove.cs" />
     <Compile Include="Assets\Scripts\IA Guardia\waypoint.cs" />
+    <Compile Include="Assets\Scripts\InteractiveGameObjects\Door.cs" />
+    <Compile Include="Assets\Scripts\InteractiveGameObjects\InteractiveItem.cs" />
+    <Compile Include="Assets\Scripts\InteractiveGameObjects\PickUp.cs" />
+    <Compile Include="Assets\Scripts\InteractiveGameObjects\PlankingObject.cs" />
+    <Compile Include="Assets\Scripts\InteractiveGameObjects\PlayerInventory.cs" />
     <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
       <HintPath>D:/Documentos 2TB/node-v8.12.0-win-x64/GitHub/Project_Garcia/ragdoll_prueba/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
     </Reference>

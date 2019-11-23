@@ -10,6 +10,7 @@ TagManager:
   - Cono de vision
   - ground
   - DuckSpawner
+  - planking collider
   layers:
   - Default
   - TransparentFX
