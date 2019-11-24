@@ -132,8 +132,8 @@ public class DuckGenerator : MonoBehaviour
     private void OnDrawGizmos()
     {
         // Dibujamos el radio de la zona de aparición
-        UnityEditor.Handles.color = Color.green;
-        UnityEditor.Handles.DrawWireDisc(objective, Vector3.up, spawnZone);
+        //UnityEditor.Handles.color = Color.green;
+        //UnityEditor.Handles.DrawWireDisc(objective, Vector3.up, spawnZone);
     }
 
     public static Vector3 posicionAleatoriaEnRadio()

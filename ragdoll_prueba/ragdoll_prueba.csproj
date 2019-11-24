@@ -248,21 +248,6 @@
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>D:/Program files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
-    <Reference Include="ProBuilderCore-Unity5">
-      <HintPath>Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
-    </Reference>
-    <Reference Include="ProBuilderMeshOps-Unity5">
-      <HintPath>Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
-    </Reference>
-    <Reference Include="KdTreeLib">
-      <HintPath>Assets/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
-    </Reference>
-    <Reference Include="pb_Stl">
-      <HintPath>Assets/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
-    </Reference>
-    <Reference Include="Poly2Tri">
-      <HintPath>Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Analytics.Editor">
       <HintPath>D:/Documentos 2TB/node-v8.12.0-win-x64/GitHub/Project_Garcia/ragdoll_prueba/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
@@ -301,14 +286,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.ProBuilder.csproj">
-      <Project>{6E2AEC81-8B40-973A-8381-AA153A2DFB86}</Project>
-      <Name>Unity.ProBuilder</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.ProBuilder.Editor.csproj">
-      <Project>{FAF27AC2-6327-295A-B809-B01BAAC648CC}</Project>
-      <Name>Unity.ProBuilder.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.ProBuilder.AssetIdRemapUtility.csproj">
       <Project>{C5787DEC-881B-2C00-2475-6C021075DC12}</Project>
       <Name>Unity.ProBuilder.AssetIdRemapUtility</Name>
@@ -339,60 +316,37 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\CameraControls.cs" />
-    <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\IcoBumpin.cs" />
-    <Compile Include="Assets\ProCore\ProBuilder\API Examples\Misc\HueCube.cs" />
-    <Compile Include="Assets\ProCore\ProBuilder\API Examples\Procedural Mesh\ExtrudeRandomEdges.cs" />
-    <Compile Include="Assets\ProCore\ProBuilder\API Examples\Runtime Editing\RuntimeEdit.cs" />
-    <Compile Include="Assets\ProCore\ProBuilder\API Examples\Vertex Colors\HighlightNearestFace.cs" />
-    <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Constant.cs" />
-    <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Enum.cs" />
-    <Compile Include="Assets\ProCore\ProGrids\Classes\pg_IconUtility.cs" />
-    <Compile Include="Assets\ProCore\ProGrids\Classes\pg_IgnoreSnapAttribute.cs" />
-    <Compile Include="Assets\ProCore\ProGrids\Classes\pg_SceneMeshRender.cs" />
-    <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Util.cs" />
-    <Compile Include="Assets\ProCore\ProGrids\MonoBehaviour\pg_IgnoreSnap.cs" />
+    <Compile Include="Assets\Scripts\Agent Garcia\Agacharse.cs" />
     <Compile Include="Assets\Scripts\Agent Garcia\caminarScript.cs" />
     <Compile Include="Assets\Scripts\Agent Garcia\dirCadera.cs" />
     <Compile Include="Assets\Scripts\Agent Garcia\dirPelvis.cs" />
+    <Compile Include="Assets\Scripts\Agent Garcia\Feets.cs" />
     <Compile Include="Assets\Scripts\Agent Garcia\FollowChild.cs" />
     <Compile Include="Assets\Scripts\Agent Garcia\Hands.cs" />
+    <Compile Include="Assets\Scripts\Agent Garcia\LeftHand.cs" />
     <Compile Include="Assets\Scripts\Agent Garcia\piernasmov.cs" />
+    <Compile Include="Assets\Scripts\Agent Garcia\RightHand.cs" />
     <Compile Include="Assets\Scripts\CameraCollision.cs" />
+    <Compile Include="Assets\Scripts\CameraCollision2.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\CameraFollowMario.cs" />
     <Compile Include="Assets\Scripts\ControlCamara.cs" />
-    <Compile Include="Assets\Scripts\IA Guardia\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Duck Scripts\DuckBehaviour.cs" />
+    <Compile Include="Assets\Scripts\Duck Scripts\DuckGenerator.cs" />
+    <Compile Include="Assets\Scripts\IA Guardia\pelvisController.cs" />
+    <Compile Include="Assets\Scripts\IA Guardia\SecurityController.cs" />
     <Compile Include="Assets\Scripts\IA Guardia\Visor.cs" />
     <Compile Include="Assets\Scripts\IA Guardia\wasdMove.cs" />
     <Compile Include="Assets\Scripts\IA Guardia\waypoint.cs" />
+    <Compile Include="Assets\Scripts\InteractiveGameObjects\Door.cs" />
+    <Compile Include="Assets\Scripts\InteractiveGameObjects\InteractiveItem.cs" />
+    <Compile Include="Assets\Scripts\InteractiveGameObjects\PickUp.cs" />
+    <Compile Include="Assets\Scripts\InteractiveGameObjects\PlankingObject.cs" />
+    <Compile Include="Assets\Scripts\InteractiveGameObjects\PlayerInventory.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\README.txt" />
-    <None Include="Assets\ProCore\ProBuilder\About\Font\SIL Open Font License.txt" />
-    <None Include="Assets\ProCore\ProBuilder\About\ThirdPartyLicenses.txt" />
-    <None Include="Assets\ProCore\ProBuilder\About\changelog.txt" />
-    <None Include="Assets\ProCore\ProBuilder\About\pc_AboutEntry_ProBuilder.txt" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\DiffuseTextureBlend.shader" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\DiffuseVertexColor.shader" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_FaceHighlight.shader" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_FacePicker.shader" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_HideVertices.shader" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_NormalPreview.shader" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_ReferenceUnlit.shader" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_ScrollHighlight.shader" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_SelectionPicker.shader" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_SmoothingPreview.shader" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_StandardVertexColor.shader" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_TransparentOverlay.shader" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_UnlitSolidColor.shader" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_UnlitVertexColor.shader" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_VertexPicker.shader" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_VertexShader.shader" />
-    <None Include="Assets\ProCore\ProBuilder\readme.txt" />
-    <None Include="Assets\ProCore\ProGrids\About\changelog.txt" />
-    <None Include="Assets\ProCore\ProGrids\About\pc_AboutEntry_ProGrids.txt" />
-    <None Include="Assets\ProCore\ProGrids\Shader\pg_GridShader.shader" />
+    <None Include="Assets\Shaders\Outline.shader" />
+    <None Include="Assets\Shaders\Outline_Siljouete.shader" />
     <None Include="Packages\com.unity.collab-proxy\Editor\Resources\Styles\CollabHistoryCommon.uss" />
     <None Include="Packages\com.unity.collab-proxy\Editor\Resources\Styles\CollabHistoryDark.uss" />
     <None Include="Packages\com.unity.collab-proxy\Editor\Resources\Styles\CollabHistoryLight.uss" />
