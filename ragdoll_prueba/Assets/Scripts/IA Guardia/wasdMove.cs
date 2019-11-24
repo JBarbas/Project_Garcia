@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class wasdMove : MonoBehaviour
 {
-    public float speed = 3.0f;
+    public float speed = 7.0f;
+    private bool dead = false;
     private Rigidbody rigid;
 
     // Start is called before the first frame update
@@ -22,6 +23,22 @@ public class wasdMove : MonoBehaviour
 
 
         transform.position += move * speed * Time.deltaTime;
+    }
 
+    public void morir()
+    {
+        dead = true;
+        Debug.Log("Muerto");
+    }
+
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag.Equals("Security"))
+        {
+            if (other.gameObject.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Golpear"))
+            {
+                morir();
+            }
+        }
     }
 }

@@ -11,6 +11,7 @@ TagManager:
   - ground
   - DuckSpawner
   - planking collider
+  - waypointPath
   layers:
   - Default
   - TransparentFX
@@ -24,7 +25,7 @@ TagManager:
   - ragdoll
   - control
   - ground
-  - 
+  - waypoint
   - 
   - 
   - 

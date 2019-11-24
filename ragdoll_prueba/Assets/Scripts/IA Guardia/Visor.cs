@@ -11,22 +11,19 @@ public class Visor : MonoBehaviour
     public string tagPlayer = "Agent Garcia";
     public string tagSecurity = "Security";
     public GameObject agent;
+    private Animator animator;
 
     // Start is called before the first frame update
     //guardamos en agent el gameObject del guardia
     void Start()
     {
-        if (agent == null)
-        {
-            agent = this.gameObject;
-        }
-
+        animator = agent.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        Debug.Log(animator.GetBool("viendoJugador"));
     }
 
     private void OnTriggerStay(Collider other)
@@ -73,9 +70,12 @@ public class Visor : MonoBehaviour
             {
                 Debug.Log("Raycast" + hit.collider.gameObject.tag);
             }
+
             if(hit.collider.gameObject.tag.Equals("Agent Garcia")){
-                agent.GetComponent<SecurityController>().state = "persiguiendo";
-                agent.GetComponent<SecurityController>().lastPosPlayer = targetPos;
+
+                animator.SetBool("esperando", false);
+                animator.SetBool("viendoJugador", true);
+                animator.SetFloat("distanciaJugador", lenght);
             }   
         }
     }
@@ -84,7 +84,16 @@ public class Visor : MonoBehaviour
     {
         if(other.tag.Equals("Agent Garcia"))
         {
-            agent.GetComponent<SecurityController>().state = "buscando";
+            GameObject target = other.gameObject;
+            Vector3 agentPos = agent.transform.position;
+            Vector3 targetPos = target.transform.position;
+            Vector3 direction = targetPos - agentPos;
+
+            float lenght = direction.magnitude;
+
+            animator.SetBool("esperando", false);
+            animator.SetBool("viendoJugador", false);
+            animator.SetFloat("distanciaJugador", lenght);
         }
     }
 }
