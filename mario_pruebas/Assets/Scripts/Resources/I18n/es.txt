@@ -1,0 +1,7 @@
+back=VOLVER
+play=JUGAR
+options=OPCIONES
+contact=CONTACTO
+exit=SALIR
+home=casa
+test=Esto es un test!

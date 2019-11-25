@@ -77,11 +77,15 @@
     <Compile Include="Assets\Scripts\Camera\ControlCamara.cs" />
     <Compile Include="Assets\Scripts\Duck Scripts\DuckBehaviour.cs" />
     <Compile Include="Assets\Scripts\Duck Scripts\DuckGenerator.cs" />
+    <Compile Include="Assets\Scripts\I18n.cs" />
+    <Compile Include="Assets\Scripts\I18nTextTranslator.cs" />
     <Compile Include="Assets\Scripts\IA Guardia\pelvisController.cs" />
     <Compile Include="Assets\Scripts\IA Guardia\SecurityController.cs" />
     <Compile Include="Assets\Scripts\IA Guardia\Visor.cs" />
     <Compile Include="Assets\Scripts\IA Guardia\wasdMove.cs" />
     <Compile Include="Assets\Scripts\IA Guardia\waypoint.cs" />
+    <None Include="Assets\Scripts\Resources\I18n\es.txt" />
+    <None Include="Assets\Scripts\Resources\I18n\en.txt" />
     <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
       <HintPath>C:/Users/Mario-PC/Desktop/Project_Garcia/mario_pruebas/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
     </Reference>
