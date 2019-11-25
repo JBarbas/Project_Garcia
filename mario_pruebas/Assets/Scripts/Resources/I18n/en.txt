@@ -1,0 +1,7 @@
+back=BACK
+play=PLAY
+options=OPTIONS
+contact=CONTACT
+exit=EXIT
+home=Home
+test=This is a test!
