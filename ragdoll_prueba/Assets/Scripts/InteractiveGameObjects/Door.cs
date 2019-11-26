@@ -6,6 +6,7 @@ public class Door : InteractiveItem
 {
 
     public float kickForce = 50f;
+    public bool needsKey = false;
 
     override
     public void onInteract()
@@ -18,14 +19,21 @@ public class Door : InteractiveItem
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Agent Garcia" && PlayerInventory.hasKey)
+        if (GetComponent<Rigidbody>().isKinematic)
         {
-            interactionText.text = text + " " + itemName;
-            if (Input.GetKeyDown(KeyCode.E))
+            if (other.gameObject.tag == "Agent Garcia" && (PlayerInventory.hasKey || !needsKey))
             {
-                onInteract();
-            }
+                interactionText.text = text + " " + itemName;
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    onInteract();
+                }
 
+            }
+            else if (other.gameObject.tag == "Agent Garcia" && needsKey)
+            {
+                interactionText.text = "You need a Key Card to open this door";
+            }
         }
     }
 
