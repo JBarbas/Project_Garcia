@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\Camera\CameraFollowMario.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraSwitch.cs" />
     <Compile Include="Assets\Scripts\Camera\ControlCamara.cs" />
+    <Compile Include="Assets\Scripts\changeLanguage.cs" />
     <Compile Include="Assets\Scripts\Duck Scripts\DuckBehaviour.cs" />
     <Compile Include="Assets\Scripts\Duck Scripts\DuckGenerator.cs" />
     <Compile Include="Assets\Scripts\I18n.cs" />

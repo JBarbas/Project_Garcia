@@ -144,4 +144,11 @@ class I18n
         return res;
     }
 
+    public static string SetLanguage(string key)
+    {
+        string res = key;
+        return res;
+        Debug.Log(res);
+    }
+
 }
