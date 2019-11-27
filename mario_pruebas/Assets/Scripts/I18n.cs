@@ -39,6 +39,7 @@ class I18n
     /// </summary>
     static I18n()
     {
+        
         LoadLanguage();
     }
 
@@ -159,8 +160,15 @@ class I18n
         
         switch (key)
         {
-            case "EN": idioma = SystemLanguage.English; break;
-            case "ES": idioma = SystemLanguage.Spanish; break;
+            case "EN":
+                idioma = SystemLanguage.English;
+                LoadLanguage();
+                break;
+            case "ES":
+               
+                idioma = SystemLanguage.Spanish;
+                LoadLanguage();
+                break;
         }
     }
 

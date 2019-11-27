@@ -19,6 +19,15 @@ public class I18nTextTranslator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(changeLanguage.idioma == 1)
+        {
+            Start();
+        }
+        if (changeLanguage.idioma == 2)
+        {
+            Start();
+        }
+
 
     }
 }

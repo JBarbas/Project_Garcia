@@ -80,6 +80,7 @@
     <Compile Include="Assets\Scripts\Duck Scripts\DuckGenerator.cs" />
     <Compile Include="Assets\Scripts\Gameplay\ClockDigital.cs" />
     <Compile Include="Assets\Scripts\Gameplay\GameOverMenu.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\NoiseController.cs" />
     <Compile Include="Assets\Scripts\Gameplay\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Puntuacion.cs" />
     <Compile Include="Assets\Scripts\I18n.cs" />
