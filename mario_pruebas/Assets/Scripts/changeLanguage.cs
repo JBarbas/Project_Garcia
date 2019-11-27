@@ -19,6 +19,6 @@ public class changeLanguage : MonoBehaviour
 
     void cambiarLenguage()
     {
-        Debug.Log(TextId);
+        
     }
 }

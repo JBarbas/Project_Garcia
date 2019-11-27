@@ -78,6 +78,10 @@
     <Compile Include="Assets\Scripts\changeLanguage.cs" />
     <Compile Include="Assets\Scripts\Duck Scripts\DuckBehaviour.cs" />
     <Compile Include="Assets\Scripts\Duck Scripts\DuckGenerator.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\ClockDigital.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\GameOverMenu.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Puntuacion.cs" />
     <Compile Include="Assets\Scripts\I18n.cs" />
     <Compile Include="Assets\Scripts\I18nTextTranslator.cs" />
     <Compile Include="Assets\Scripts\IA Guardia\pelvisController.cs" />
@@ -85,6 +89,7 @@
     <Compile Include="Assets\Scripts\IA Guardia\Visor.cs" />
     <Compile Include="Assets\Scripts\IA Guardia\wasdMove.cs" />
     <Compile Include="Assets\Scripts\IA Guardia\waypoint.cs" />
+    <Compile Include="Assets\Scripts\MenuPrincipal\MenuPrincipal.cs" />
     <None Include="Assets\Scripts\Resources\I18n\es.txt" />
     <None Include="Assets\Scripts\Resources\I18n\en.txt" />
     <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">

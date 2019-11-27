@@ -32,6 +32,7 @@ class I18n
     /// Example: I18n.Fields["world"]
     /// </summary>
     public static Dictionary<String, String> Fields { get; private set; }
+    private static SystemLanguage idioma = SystemLanguage.Spanish;
 
     /// <summary>
     /// Init on first use
@@ -92,7 +93,16 @@ class I18n
     /// <returns>The 2-letter ISO code from system language.</returns>
     public static string Get2LetterISOCodeFromSystemLanguage()
     {
-        SystemLanguage lang = Application.systemLanguage;
+        SystemLanguage lang;
+        if (idioma != null)
+        {
+            lang = idioma;
+        }
+        else
+        {
+            lang = Application.systemLanguage;
+        }
+        
         string res = "EN";
         switch (lang)
         {
@@ -144,11 +154,14 @@ class I18n
         return res;
     }
 
-    public static string SetLanguage(string key)
+    public static void SetLanguage(string key)
     {
-        string res = key;
-        return res;
-        Debug.Log(res);
+        
+        switch (key)
+        {
+            case "EN": idioma = SystemLanguage.English; break;
+            case "ES": idioma = SystemLanguage.Spanish; break;
+        }
     }
 
 }

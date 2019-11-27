@@ -7,3 +7,7 @@ lang=LANGUAGE
 sound=SOUND
 espa=SPANISH
 engl=ENGLISH
+pause=PAUSE
+resume=RESUME
+restart=RESTART
+over=GAME OVER
