@@ -1,0 +1,13 @@
+back=VOLVER
+play=JUGAR
+options=OPCIONES
+contact=CONTACTO
+exit=SALIR
+lang=IDIOMA
+sound=SONIDO
+espa=ESPANOL
+engl=INGLES
+pause=PAUSA
+resume=REANUDAR
+restart=REINICIAR
+over=FIN DEL JUEGO
