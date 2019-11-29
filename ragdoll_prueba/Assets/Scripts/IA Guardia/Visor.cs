@@ -6,21 +6,14 @@ public class Visor : MonoBehaviour
 {
     public bool debugMode = false;
 
-    //tags para todos los objetos relevantes
-    public string tagWall = "Wall";
-    public string tagPlayer = "Agent Garcia";
-    public string tagSecurity = "Security";
     public GameObject agent;
     private Animator animator;
 
-    // Start is called before the first frame update
-    //guardamos en agent el gameObject del guardia
     void Start()
     {
         animator = agent.GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         Debug.Log(animator.GetBool("viendoJugador"));
@@ -28,9 +21,6 @@ public class Visor : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        /*cuando el cono de vision colisiona con otro elemento con rigidbody
-        **cogemos la posicion del guardia, la del objeto que entra en el cono,
-        **calculamos la direccion y distancia entre ellos*/
         string tag = other.gameObject.tag;
 
         GameObject target = other.gameObject;

@@ -10,12 +10,14 @@ public class Patrullar : StateMachineBehaviour
     private int currentWP;
     private NavMeshAgent _agent;
     private GameObject NPC;
+    private GameObject player;
     private float distanceToWP = 1.0f;
     private float speed = 2.5f;
 
     private void Awake()
     {
         waypointPath = GameObject.FindGameObjectWithTag("waypointPath").transform;
+        player = GameObject.FindGameObjectWithTag("playerInfo");
     } 
 
     //OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -24,6 +26,7 @@ public class Patrullar : StateMachineBehaviour
         _agent = animator.gameObject.GetComponent<NavMeshAgent>();
         _agent.speed = speed;
         NPC = animator.gameObject;
+        player.GetComponent<playerInfo>().state = "safe";
         currentWP = Random.Range(0, waypointPath.childCount-1);
         nextWP = waypointPath.GetChild(currentWP);
     }

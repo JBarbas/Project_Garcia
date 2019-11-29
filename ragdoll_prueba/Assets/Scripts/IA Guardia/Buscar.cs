@@ -7,7 +7,13 @@ public class Buscar : StateMachineBehaviour
 {
     private NavMeshAgent _agent;
     private GameObject NPC;
+    private GameObject player;
     private float speed = 0.0f;
+
+    private void Awake()
+    {
+        player = GameObject.FindGameObjectWithTag("playerInfo");
+    }
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -15,6 +21,7 @@ public class Buscar : StateMachineBehaviour
         _agent = animator.gameObject.GetComponent<NavMeshAgent>();
         _agent.speed = speed;
         NPC = animator.gameObject;
+        player.GetComponent<playerInfo>().state = "miss";
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
