@@ -12,6 +12,8 @@ TagManager:
   - DuckSpawner
   - planking collider
   - waypointPath
+  - playerInfo
+  - npcInfo
   layers:
   - Default
   - TransparentFX

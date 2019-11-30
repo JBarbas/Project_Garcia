@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class Patrullar : StateMachineBehaviour
 {
+    private GameObject[] waypointPaths;
     private Transform waypointPath;
     private Transform nextWP;
     private int currentWP;
@@ -16,7 +17,7 @@ public class Patrullar : StateMachineBehaviour
 
     private void Awake()
     {
-        waypointPath = GameObject.FindGameObjectWithTag("waypointPath").transform;
+        waypointPaths = GameObject.FindGameObjectsWithTag("waypointPath");
         player = GameObject.FindGameObjectWithTag("playerInfo");
     } 
 
@@ -26,6 +27,7 @@ public class Patrullar : StateMachineBehaviour
         _agent = animator.gameObject.GetComponent<NavMeshAgent>();
         _agent.speed = speed;
         NPC = animator.gameObject;
+        waypointPath = waypointPaths[NPC.GetComponent<NPCinfo>().NPCid].transform;
         player.GetComponent<playerInfo>().state = "safe";
         currentWP = Random.Range(0, waypointPath.childCount-1);
         nextWP = waypointPath.GetChild(currentWP);

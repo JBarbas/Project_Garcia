@@ -83,6 +83,7 @@
      <Compile Include="Assets\Scripts\IA Guardia\Buscar.cs" />
      <Compile Include="Assets\Scripts\IA Guardia\Golpear.cs" />
      <Compile Include="Assets\Scripts\IA Guardia\Idle.cs" />
+     <Compile Include="Assets\Scripts\IA Guardia\NPCinfo.cs" />
      <Compile Include="Assets\Scripts\IA Guardia\Patrullar.cs" />
      <Compile Include="Assets\Scripts\IA Guardia\Perseguir.cs" />
      <Compile Include="Assets\Scripts\IA Guardia\Visor.cs" />
