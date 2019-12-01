@@ -7,13 +7,13 @@ public class Perseguir : StateMachineBehaviour
 {
     private NavMeshAgent _agent;
     private GameObject NPC;
-    private GameObject player;
+    private GameObject playerInfo;
     private GameObject agentGarcia;
     private float speed = 5.0f;
 
     private void Awake()
     {
-        player = GameObject.FindGameObjectWithTag("playerInfo");
+        playerInfo = GameObject.FindGameObjectWithTag("playerInfo");
         agentGarcia = GameObject.FindGameObjectWithTag("Agent Garcia");
     }
 
@@ -23,7 +23,7 @@ public class Perseguir : StateMachineBehaviour
         _agent = animator.gameObject.GetComponent<NavMeshAgent>();
         _agent.speed = speed;
         NPC = animator.gameObject;
-        player.GetComponent<playerInfo>().state = "in danger";
+        playerInfo.GetComponent<playerInfo>().state = "in danger";
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

@@ -351,7 +351,7 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 3
     m_ConditionEvent: distanciaJugador
-    m_EventTreshold: 1
+    m_EventTreshold: 0.5
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102256203101661900}
   m_Solo: 0
@@ -377,6 +377,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: viendoJugador
     m_EventTreshold: 0
+  - m_ConditionMode: 4
+    m_ConditionEvent: distanciaJugador
+    m_EventTreshold: 10
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102256203101661900}
   m_Solo: 0
@@ -452,6 +455,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: viendoJugador
     m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: distanciaJugador
+    m_EventTreshold: 10
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102775952694580298}
   m_Solo: 0

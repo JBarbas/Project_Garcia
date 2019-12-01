@@ -7,16 +7,20 @@ public class Visor : MonoBehaviour
     public bool debugMode = false;
 
     public GameObject agent;
+    public GameObject agentGarcia;
     private Animator animator;
 
     void Start()
     {
         animator = agent.GetComponent<Animator>();
+        agentGarcia = GameObject.FindGameObjectWithTag("Agent Garcia");
     }
 
     void Update()
     {
-        Debug.Log(animator.GetBool("viendoJugador"));
+        //Debug.Log(animator.GetBool("viendoJugador"));
+        animator.SetFloat("distanciaJugador", (agent.transform.position - agentGarcia.transform.position).magnitude );
+        Debug.Log(animator.GetFloat("distanciaJugador"));
     }
 
     private void OnTriggerStay(Collider other)
@@ -65,7 +69,6 @@ public class Visor : MonoBehaviour
 
                 animator.SetBool("esperando", false);
                 animator.SetBool("viendoJugador", true);
-                animator.SetFloat("distanciaJugador", lenght);
             }   
         }
     }
@@ -83,7 +86,6 @@ public class Visor : MonoBehaviour
 
             animator.SetBool("esperando", false);
             animator.SetBool("viendoJugador", false);
-            animator.SetFloat("distanciaJugador", lenght);
         }
     }
 }
