@@ -20,7 +20,7 @@ public class Visor : MonoBehaviour
     {
         //Debug.Log(animator.GetBool("viendoJugador"));
         animator.SetFloat("distanciaJugador", (agent.transform.position - agentGarcia.transform.position).magnitude );
-        Debug.Log(animator.GetFloat("distanciaJugador"));
+        //Debug.Log(animator.GetFloat("distanciaJugador"));
     }
 
     private void OnTriggerStay(Collider other)

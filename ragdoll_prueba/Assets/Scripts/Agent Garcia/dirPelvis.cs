@@ -15,10 +15,10 @@ public class dirPelvis : MonoBehaviour
     public float walkSpeed = 100;
     public float runSpeed = 500;
 
-    private bool moving = false;
+    public bool moving = false;
     private bool rotated = false;
     private bool jumping = false;
-    private bool running = false;
+    public bool running = false;
     private Vector3 origin;
     private bool moveFront = false;
     private bool moveLeft = false;
@@ -204,5 +204,10 @@ public class dirPelvis : MonoBehaviour
         {
             //plankingMade = true;
         }
+    }
+
+    public bool isMoving()
+    {
+        return moveBack || moveFront || moveLeft || moveRight;
     }
 }

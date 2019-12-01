@@ -81,11 +81,14 @@
      <Compile Include="Assets\Scripts\I18n.cs" />
      <Compile Include="Assets\Scripts\I18nTextTranslator.cs" />
      <Compile Include="Assets\Scripts\IA Guardia\Buscar.cs" />
+     <Compile Include="Assets\Scripts\IA Guardia\Escuchar.cs" />
      <Compile Include="Assets\Scripts\IA Guardia\Golpear.cs" />
      <Compile Include="Assets\Scripts\IA Guardia\Idle.cs" />
      <Compile Include="Assets\Scripts\IA Guardia\NPCinfo.cs" />
      <Compile Include="Assets\Scripts\IA Guardia\Patrullar.cs" />
      <Compile Include="Assets\Scripts\IA Guardia\Perseguir.cs" />
+     <Compile Include="Assets\Scripts\IA Guardia\SoundEmitter.cs" />
+     <Compile Include="Assets\Scripts\IA Guardia\SoundReceiver.cs" />
      <Compile Include="Assets\Scripts\IA Guardia\Visor.cs" />
      <Compile Include="Assets\Scripts\IA Guardia\wasdMove.cs" />
      <Compile Include="Assets\Scripts\IA Guardia\waypoint.cs" />

@@ -16,6 +16,7 @@ public class Idle : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         player.GetComponent<playerInfo>().state = "safe";
+        animator.SetBool("terminadoEscuchar", false);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
