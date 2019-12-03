@@ -15,6 +15,7 @@ TagManager:
   - playerInfo
   - npcInfo
   - EmisionSonido
+  - localizationManager
   layers:
   - Default
   - TransparentFX

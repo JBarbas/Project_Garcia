@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class DuckGenerator : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class DuckGenerator : MonoBehaviour
     // Prefab del pato
     public GameObject duckPrefab;
     // Distancia máxima con zona de aparición
-    public static int spawnZone = 5;
+    public static int spawnZone = 3;
     // Centro del área de expansión de la bandada
     public static Vector3 objective;
 
@@ -21,7 +22,7 @@ public class DuckGenerator : MonoBehaviour
 
     // Comprueba que se sigue al jugador
     public bool followPlayer = false;
-    
+
     // Cuenta cuantos patos que siguen al jugador no pueden alcanzar su destino
     public int contactLost = 0;
 
@@ -29,7 +30,7 @@ public class DuckGenerator : MonoBehaviour
     void Start()
     {
         // Asignamos al jugador
-        player = GameObject.FindGameObjectWithTag("Agent Garcia");
+        player = GameObject.FindGameObjectWithTag("Player");
 
         // Inicializamos la posición del objetivo como el lugar de aparición de los patos
         objective = transform.position;
@@ -48,13 +49,11 @@ public class DuckGenerator : MonoBehaviour
     void Update()
     {
         // Si el jugador usa la tecla interactuar
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && PlayerInventory.equipedDAC == "ZAPAPATOS")
         {
-            Debug.Log("tecla pulsada");
             // En el radio del generador de patos, lo siguen
             if (Vector3.Distance(player.transform.position, transform.position) <= spawnZone)
             {
-                Debug.Log("dentro del circulo");
                 followPlayer = !followPlayer;
                 if (!followPlayer)
                     for (int i = 0; i < numDucks; i++)
@@ -76,7 +75,8 @@ public class DuckGenerator : MonoBehaviour
 
         }
         // Si siguen al jugador
-        if (followPlayer) {
+        if (followPlayer)
+        {
             // Comprobamos cuantos patos pueden llegar a su posición
             for (int i = 0; i < numDucks; i++)
             {
@@ -99,30 +99,26 @@ public class DuckGenerator : MonoBehaviour
             {
                 // Si al menos un pato puede, los que no probarán a posicionarse del otro lado
                 Vector3 posPlayer = new Vector3(player.transform.position.x, 0, player.transform.position.z);
-                if(allDucks[0].GetComponent<DuckBehaviour>().returnToSpawn)
-                    allDucks[0].GetComponent<DuckBehaviour>().currentDestiny = posPlayer + player.transform.forward + new Vector3(0, 0, -1.5f);
-                else
-                    allDucks[0].GetComponent<DuckBehaviour>().currentDestiny = posPlayer + player.transform.forward + new Vector3(0, 0, 2.5f);
 
-                if (allDucks[1].GetComponent<DuckBehaviour>().returnToSpawn)
-                    allDucks[1].GetComponent<DuckBehaviour>().currentDestiny = posPlayer + player.transform.forward + new Vector3(-1.5f, 0, -1f);
-                else
-                    allDucks[1].GetComponent<DuckBehaviour>().currentDestiny = posPlayer + player.transform.forward + new Vector3(2.5f, 0, 1.5f);
+                NavMeshHit hit;
+                NavMesh.SamplePosition(posPlayer + (player.transform.forward + new Vector3(0, 0, 2.5f)) / 3, out hit, spawnZone, NavMesh.AllAreas);
+                allDucks[0].GetComponent<DuckBehaviour>().currentDestiny = hit.position;
 
-                if (allDucks[2].GetComponent<DuckBehaviour>().returnToSpawn)
-                    allDucks[2].GetComponent<DuckBehaviour>().currentDestiny = posPlayer + player.transform.forward + new Vector3(-1f, 0, 1.5f);
-                else
-                    allDucks[2].GetComponent<DuckBehaviour>().currentDestiny = posPlayer + player.transform.forward + new Vector3(1.5f, 0, -2.5f);
+                NavMesh.SamplePosition(posPlayer + (player.transform.forward + new Vector3(2.5f, 0, 1.5f)) / 3, out hit, spawnZone, NavMesh.AllAreas);
+                
+                allDucks[1].GetComponent<DuckBehaviour>().currentDestiny = hit.position;
 
-                if (allDucks[3].GetComponent<DuckBehaviour>().returnToSpawn)
-                    allDucks[3].GetComponent<DuckBehaviour>().currentDestiny = posPlayer + player.transform.forward + new Vector3(1f, 0, 1.5f);
-                else
-                    allDucks[3].GetComponent<DuckBehaviour>().currentDestiny = posPlayer + player.transform.forward + new Vector3(-1.5f, 0, -2.5f);
+                NavMesh.SamplePosition(posPlayer + (player.transform.forward + new Vector3(1.5f, 0, -2.5f)) / 3, out hit, spawnZone, NavMesh.AllAreas);
+                
+                allDucks[2].GetComponent<DuckBehaviour>().currentDestiny = hit.position;
 
-                if (allDucks[4].GetComponent<DuckBehaviour>().returnToSpawn)
-                    allDucks[4].GetComponent<DuckBehaviour>().currentDestiny = posPlayer + player.transform.forward + new Vector3(-1.5f, 0, -1f);
-                else
-                    allDucks[4].GetComponent<DuckBehaviour>().currentDestiny = posPlayer + player.transform.forward + new Vector3(-2.5f, 0, 1.5f);
+                NavMesh.SamplePosition(posPlayer + (player.transform.forward + new Vector3(-1.5f, 0, -2.5f)) / 3, out hit, spawnZone, NavMesh.AllAreas);
+                
+                allDucks[3].GetComponent<DuckBehaviour>().currentDestiny = hit.position;
+
+                NavMesh.SamplePosition(posPlayer + (player.transform.forward + new Vector3(-2.5f, 0, 1.5f)) / 3, out hit, spawnZone, NavMesh.AllAreas);
+                
+                allDucks[4].GetComponent<DuckBehaviour>().currentDestiny = hit.position;
 
             }
             contactLost = 0;
@@ -132,8 +128,8 @@ public class DuckGenerator : MonoBehaviour
     private void OnDrawGizmos()
     {
         // Dibujamos el radio de la zona de aparición
-        //UnityEditor.Handles.color = Color.green;
-        //UnityEditor.Handles.DrawWireDisc(objective, Vector3.up, spawnZone);
+        UnityEditor.Handles.color = Color.green;
+        UnityEditor.Handles.DrawWireDisc(objective, Vector3.up, spawnZone);
     }
 
     public static Vector3 posicionAleatoriaEnRadio()
