@@ -22,7 +22,7 @@ public class DuckGenerator : MonoBehaviour
 
     // Comprueba que se sigue al jugador
     public bool followPlayer = false;
-
+    
     // Cuenta cuantos patos que siguen al jugador no pueden alcanzar su destino
     public int contactLost = 0;
 
@@ -30,7 +30,7 @@ public class DuckGenerator : MonoBehaviour
     void Start()
     {
         // Asignamos al jugador
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("Agent Garcia");
 
         // Inicializamos la posición del objetivo como el lugar de aparición de los patos
         objective = transform.position;
@@ -75,8 +75,7 @@ public class DuckGenerator : MonoBehaviour
 
         }
         // Si siguen al jugador
-        if (followPlayer)
-        {
+        if (followPlayer) {
             // Comprobamos cuantos patos pueden llegar a su posición
             for (int i = 0; i < numDucks; i++)
             {
@@ -102,23 +101,39 @@ public class DuckGenerator : MonoBehaviour
 
                 NavMeshHit hit;
                 NavMesh.SamplePosition(posPlayer + (player.transform.forward + new Vector3(0, 0, 2.5f)) / 3, out hit, spawnZone, NavMesh.AllAreas);
-                allDucks[0].GetComponent<DuckBehaviour>().currentDestiny = hit.position;
+
+                //if (allDucks[0].GetComponent<DuckBehaviour>().returnToSpawn)
+                    allDucks[0].GetComponent<DuckBehaviour>().currentDestiny = hit.position;
+                /*else
+                    allDucks[0].GetComponent<DuckBehaviour>().currentDestiny = posPlayer + player.transform.forward + new Vector3(0, 0, 2.5f);*/
 
                 NavMesh.SamplePosition(posPlayer + (player.transform.forward + new Vector3(2.5f, 0, 1.5f)) / 3, out hit, spawnZone, NavMesh.AllAreas);
-                
+
+                //if (allDucks[1].GetComponent<DuckBehaviour>().returnToSpawn)
                 allDucks[1].GetComponent<DuckBehaviour>().currentDestiny = hit.position;
+                /*else
+                    allDucks[1].GetComponent<DuckBehaviour>().currentDestiny = posPlayer + player.transform.forward + new Vector3(2.5f, 0, 1.5f);*/
 
                 NavMesh.SamplePosition(posPlayer + (player.transform.forward + new Vector3(1.5f, 0, -2.5f)) / 3, out hit, spawnZone, NavMesh.AllAreas);
-                
+
+                //if (allDucks[2].GetComponent<DuckBehaviour>().returnToSpawn)
                 allDucks[2].GetComponent<DuckBehaviour>().currentDestiny = hit.position;
+                /*else
+                    allDucks[2].GetComponent<DuckBehaviour>().currentDestiny = posPlayer + player.transform.forward + new Vector3(1.5f, 0, -2.5f);*/
 
                 NavMesh.SamplePosition(posPlayer + (player.transform.forward + new Vector3(-1.5f, 0, -2.5f)) / 3, out hit, spawnZone, NavMesh.AllAreas);
-                
+
+                //if (allDucks[3].GetComponent<DuckBehaviour>().returnToSpawn)
                 allDucks[3].GetComponent<DuckBehaviour>().currentDestiny = hit.position;
+                /*else
+                    allDucks[3].GetComponent<DuckBehaviour>().currentDestiny = posPlayer + player.transform.forward + new Vector3(-1.5f, 0, -2.5f);*/
 
                 NavMesh.SamplePosition(posPlayer + (player.transform.forward + new Vector3(-2.5f, 0, 1.5f)) / 3, out hit, spawnZone, NavMesh.AllAreas);
-                
+
+                //if (allDucks[4].GetComponent<DuckBehaviour>().returnToSpawn)
                 allDucks[4].GetComponent<DuckBehaviour>().currentDestiny = hit.position;
+                /*else
+                    allDucks[4].GetComponent<DuckBehaviour>().currentDestiny = posPlayer + player.transform.forward + new Vector3(-2.5f, 0, 1.5f);*/
 
             }
             contactLost = 0;

@@ -31,7 +31,7 @@ public class DuckBehaviour : MonoBehaviour
 
     // Referencia al jugador (tambien se puede hacer public y asignarselo desde la interfaz en vez de buscarlo en Start())
     private GameObject player;
-
+    
     // Comprueba si se ha cumplido la condición de abandonar al jugador
     public bool returnToSpawn = false;
 
@@ -50,11 +50,11 @@ public class DuckBehaviour : MonoBehaviour
 
         // Referencia al jugador
         player = GameObject.FindGameObjectWithTag("Agent Garcia");
-
+        
         // Guardamos la duración en segundos de cada animación
         anim = GetComponent<Animator>();
         clips = anim.runtimeAnimatorController.animationClips;
-        foreach (AnimationClip clip in clips)
+        foreach(AnimationClip clip in clips)
         {
             switch (clip.name)
             {
@@ -78,7 +78,6 @@ public class DuckBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("velocidad: " + anim.GetFloat("speed"));
         // Si el pato no está siguiendo al jugador
         if (!GameObject.FindGameObjectWithTag("DuckSpawner").GetComponent<DuckGenerator>().followPlayer)
         {
@@ -117,13 +116,13 @@ public class DuckBehaviour : MonoBehaviour
             startCounter = false;
             counter = 0f;
             // Los patos tendrán el doble de la velocidad del jugador
-            _agent.speed = player.GetComponent<dirPelvis>().walkSpeed * 2;
+            _agent.speed = 2;
             // Los patos se detendrán cuando estén a esta distancia de su objetivo
             _agent.stoppingDistance = 0.2f;
 
             // Variable que comprobará que el destino del agente es válido
             bool stopIfUnreachable = false;
-
+            
             // Cuando el jugador avance
             if (_agent.destination != currentDestiny)
             {
