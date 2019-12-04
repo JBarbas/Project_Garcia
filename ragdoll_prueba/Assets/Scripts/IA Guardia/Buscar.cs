@@ -9,6 +9,7 @@ public class Buscar : StateMachineBehaviour
     private GameObject NPC;
     private GameObject player;
     private float speed = 0.0f;
+    private int currentWP;
 
     private void Awake()
     {
@@ -22,6 +23,7 @@ public class Buscar : StateMachineBehaviour
         _agent.speed = speed;
         NPC = animator.gameObject;
         player.GetComponent<playerInfo>().state = "miss";
+        currentWP = NPC.GetComponent<NPCinfo>().currentWP;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

@@ -151,6 +151,12 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4306130, guid: 511b47e67750b6043a9050978f113f44, type: 3}
+--- !u!1 &28772016 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7788990400264506833, guid: d6747c19c64371e43ae221e80d87f70f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1229137952}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &67730283 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4147115979664538835, guid: 2e10451e79dae2441ac13c515a0d9d03,
@@ -2116,6 +2122,16 @@ PrefabInstance:
       propertyPath: camera
       value: 
       objectReference: {fileID: 1830931754}
+    - target: {fileID: 2411535966393612309, guid: d6747c19c64371e43ae221e80d87f70f,
+        type: 3}
+      propertyPath: pelvis
+      value: 
+      objectReference: {fileID: 28772016}
+    - target: {fileID: 2411535966393612309, guid: d6747c19c64371e43ae221e80d87f70f,
+        type: 3}
+      propertyPath: pecho
+      value: 
+      objectReference: {fileID: 1280745430}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6747c19c64371e43ae221e80d87f70f, type: 3}
 --- !u!1 &1229137953 stripped
@@ -2194,6 +2210,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &1280745430 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7788990400264506839, guid: d6747c19c64371e43ae221e80d87f70f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1229137952}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1292614338 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4147115979635261143, guid: 2e10451e79dae2441ac13c515a0d9d03,
