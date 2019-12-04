@@ -8,11 +8,11 @@ public class Patrullar : StateMachineBehaviour
     private GameObject[] waypointPaths;
     private Transform waypointPath;
     private Transform nextWP;
-    public int currentWP;
+    private int currentWP;
     private NavMeshAgent _agent;
     private GameObject NPC;
     private GameObject player;
-    private float distanceToWP = 0.2f;
+    private float distanceToWP = 1.0f;
     private float speed = 2.5f;
 
     private void Awake()
@@ -30,7 +30,7 @@ public class Patrullar : StateMachineBehaviour
         NPC = animator.gameObject;
         waypointPath = waypointPaths[NPC.GetComponent<NPCinfo>().NPCid].transform;
         player.GetComponent<playerInfo>().state = "safe";
-        currentWP = 0;
+        currentWP = Random.Range(0, waypointPath.childCount-1);
         nextWP = waypointPath.GetChild(currentWP);
     }
 
@@ -43,12 +43,10 @@ public class Patrullar : StateMachineBehaviour
             if (currentWP < waypointPath.childCount - 1)
             {
                 currentWP++;
-                NPC.GetComponent<NPCinfo>().currentWP = currentWP;
             }
             else
             {
-                //currentWP = Random.Range(0, waypointPath.childCount - 1); Pillo uno random
-                currentWP = 0;
+                currentWP = Random.Range(0, waypointPath.childCount - 1); ;
             }
 
             nextWP = waypointPath.GetChild(currentWP);

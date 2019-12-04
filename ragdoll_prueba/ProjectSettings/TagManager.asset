@@ -15,11 +15,7 @@ TagManager:
   - playerInfo
   - npcInfo
   - EmisionSonido
-<<<<<<< HEAD
-  - ZeroGravityTeam
-=======
   - localizationManager
->>>>>>> 1bf0f012f2fb0c846fb3ca3558b68471becfa5be
   layers:
   - Default
   - TransparentFX
