@@ -4,6 +4,9 @@ using UnityEngine.UI;
 public class I18nTextTranslator : MonoBehaviour
 {
     public string TextId;
+    public GameObject imgTitleO, imgTitleC;
+    public Sprite optionsSprite, contactSprite, opcionesSprite, contactoSprite;
+
 
     // Use this for initialization
     void Start()
@@ -12,6 +15,7 @@ public class I18nTextTranslator : MonoBehaviour
         if (text != null)
             if (TextId == "ISOCode")
                 text.text = I18n.GetLanguage();
+                
             else
                 text.text = I18n.Fields[TextId];
     }
@@ -22,10 +26,15 @@ public class I18nTextTranslator : MonoBehaviour
         if(changeLanguage.idioma == 1)
         {
             Start();
+            
+            //imgTitleC.GetComponent<SpriteRenderer>().sprite = contactoSprite;
+            //imgTitleO.GetComponent<SpriteRenderer>().sprite = opcionesSprite;
         }
         if (changeLanguage.idioma == 2)
         {
             Start();
+
+            changeImage.cambiarFoto(2);
         }
 
 

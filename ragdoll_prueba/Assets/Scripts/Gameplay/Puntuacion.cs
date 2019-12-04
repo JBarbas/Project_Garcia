@@ -12,11 +12,11 @@ public class Puntuacion : MonoBehaviour
     //Objeto de las estrellas
     public GameObject star1, star2, star3;
     public Sprite starEmpty;
+    public int activado = 1;
 
 
     public void Update()
     {
-        {
             //Utilizo la hora del sistema para sumar a sec
             sec += Time.deltaTime;
             //Voy definiendo si hay paso de minuto y paso de hora siguiente
@@ -71,8 +71,13 @@ public class Puntuacion : MonoBehaviour
                 star1.GetComponent<Image>().sprite = starEmpty;
             }
 
+            if(activado == 1)
+            {
+                PlayerPrefs.SetInt("puntuacion", 10);
+                int marcador = PlayerPrefs.GetInt("puntuacion", 0);
+                Debug.Log("Marcador = " + marcador);
+            }
 
-        }
     }
 
 }

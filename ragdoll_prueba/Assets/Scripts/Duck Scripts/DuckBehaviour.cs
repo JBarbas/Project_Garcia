@@ -16,8 +16,6 @@ public class DuckBehaviour : MonoBehaviour
     // Posición objetivo
     public Vector3 currentDestiny;
 
-    public float playerSpeed = 4f;
-
     // Animator
     private Animator anim;
     // Array que contiene las animaciones
@@ -86,7 +84,7 @@ public class DuckBehaviour : MonoBehaviour
             // Si no están siguiendo al jugador, usarán su velocidad habitual
             _agent.speed = speed;
             // Definimos la distancia a la que se detendrán del objetivo
-            _agent.stoppingDistance = 0.5f;
+            _agent.stoppingDistance = 0.2f;
             // Pasamos la velociadad al parámetro del Animator para que cumpla la transición de paso a andar
             anim.SetFloat("speed", speed);
 
@@ -118,9 +116,9 @@ public class DuckBehaviour : MonoBehaviour
             startCounter = false;
             counter = 0f;
             // Los patos tendrán el doble de la velocidad del jugador
-            _agent.speed = playerSpeed;
+            _agent.speed = 2;
             // Los patos se detendrán cuando estén a esta distancia de su objetivo
-            _agent.stoppingDistance = 0.4f;
+            _agent.stoppingDistance = 0.2f;
 
             // Variable que comprobará que el destino del agente es válido
             bool stopIfUnreachable = false;
