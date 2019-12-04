@@ -16,6 +16,7 @@ TagManager:
   - npcInfo
   - EmisionSonido
   - localizationManager
+  - ZeroGravityTeam
   layers:
   - Default
   - TransparentFX

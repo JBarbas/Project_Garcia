@@ -8,18 +8,18 @@ public class Patrullar : StateMachineBehaviour
     private GameObject[] waypointPaths;
     private Transform waypointPath;
     private Transform nextWP;
-    private int currentWP;
+    public int currentWP;
     private NavMeshAgent _agent;
     private GameObject NPC;
     private GameObject player;
-    private float distanceToWP = 1.0f;
+    private float distanceToWP = 0.2f;
     private float speed = 2.5f;
 
     private void Awake()
     {
         waypointPaths = GameObject.FindGameObjectsWithTag("waypointPath");
         player = GameObject.FindGameObjectWithTag("playerInfo");
-    } 
+    }
 
     //OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -30,7 +30,7 @@ public class Patrullar : StateMachineBehaviour
         NPC = animator.gameObject;
         waypointPath = waypointPaths[NPC.GetComponent<NPCinfo>().NPCid].transform;
         player.GetComponent<playerInfo>().state = "safe";
-        currentWP = Random.Range(0, waypointPath.childCount-1);
+        currentWP = 0;
         nextWP = waypointPath.GetChild(currentWP);
     }
 
@@ -43,10 +43,12 @@ public class Patrullar : StateMachineBehaviour
             if (currentWP < waypointPath.childCount - 1)
             {
                 currentWP++;
+                NPC.GetComponent<NPCinfo>().currentWP = currentWP;
             }
             else
             {
-                currentWP = Random.Range(0, waypointPath.childCount - 1); ;
+                //currentWP = Random.Range(0, waypointPath.childCount - 1); Pillo uno random
+                currentWP = 0;
             }
 
             nextWP = waypointPath.GetChild(currentWP);

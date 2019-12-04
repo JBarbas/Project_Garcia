@@ -33,29 +33,38 @@ public class playerInfo : MonoBehaviour
         corriendo = pelvis.GetComponent<dirPelvis>().running;
         caminando = pelvis.GetComponent<dirPelvis>().isMoving();
 
-        if (agachado){
+        if (agachado)
+        {
 
             if (caminando)
             {
                 intensidadRuido = ruidoCaminandoAgachado;
 
-            }else if (corriendo){
+            }
+            else if (corriendo)
+            {
 
                 intensidadRuido = ruidoCorriendoAgachado;
-            }else
+            }
+            else
             {
                 intensidadRuido = ruidoAgachado;
 
             }
-        }else if (corriendo){
+        }
+        else if (corriendo)
+        {
 
             intensidadRuido = ruidoCorriendo;
 
-        }else if(caminando){
+        }
+        else if (caminando)
+        {
 
             intensidadRuido = ruidoCaminando;
 
-        }else
+        }
+        else
         {
             intensidadRuido = 0;
         }

@@ -39,22 +39,6 @@ public class Visor : MonoBehaviour
         {
             Debug.DrawLine(agentPos, targetPos, Color.red);
         }
-        
-        //codigo de Julio que no se si sera mas optimo, pero creo que con lo mio
-        //es suficiente. De momento lo dejo, me da miedo borrarlo.
-
-        /*Ray ray = new Ray(agentPos, direction);
-
-        RaycastHit[] hits;
-        hits = Physics.RaycastAll(ray, lenght);
-
-        for (int i = 0; i < hits.Length; i++)
-        {
-            GameObject hitObj;
-            hitObj = hits[i].collider.gameObject;
-            tag = hitObj.tag;
-            Debug.Log("RayCast "+tag);
-        }*/
 
         /*Lanzamos un raycast que se detiene cuando impacta con algo*/
         RaycastHit hit;
@@ -69,6 +53,7 @@ public class Visor : MonoBehaviour
 
                 animator.SetBool("esperando", false);
                 animator.SetBool("viendoJugador", true);
+                animator.SetTrigger("aPerseguir");
             }   
         }
     }
@@ -86,6 +71,7 @@ public class Visor : MonoBehaviour
 
             animator.SetBool("esperando", false);
             animator.SetBool("viendoJugador", false);
+            animator.ResetTrigger("aPerseguir");
         }
     }
 }
