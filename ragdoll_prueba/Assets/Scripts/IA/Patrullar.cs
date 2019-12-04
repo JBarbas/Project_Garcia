@@ -30,7 +30,7 @@ public class Patrullar : StateMachineBehaviour
         NPC = animator.gameObject;
         waypointPath = waypointPaths[NPC.GetComponent<NPCinfo>().NPCid].transform;
         player.GetComponent<playerInfo>().state = "safe";
-        currentWP = 0;
+        currentWP = NPC.GetComponent<NPCinfo>().currentWP;
         nextWP = waypointPath.GetChild(currentWP);
     }
 
