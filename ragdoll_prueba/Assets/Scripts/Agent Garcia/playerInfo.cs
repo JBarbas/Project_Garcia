@@ -20,6 +20,9 @@ public class playerInfo : MonoBehaviour
     public bool corriendo;
     public bool caminando;
 
+    public AudioSource main_music;
+    public AudioSource persiguiendo_music;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -67,6 +70,29 @@ public class playerInfo : MonoBehaviour
         else
         {
             intensidadRuido = 0;
+        }
+
+        if (state.Equals("in danger"))
+        {
+            if (persiguiendo_music.volume < 1)
+            {
+                persiguiendo_music.volume += 0.01f;
+            }
+            if (main_music.volume > 0)
+            {
+                main_music.volume -= 0.01f;
+            }
+        }
+        else
+        {
+            if (persiguiendo_music.volume > 0)
+            {
+                persiguiendo_music.volume -= 0.01f;
+            }
+            if (main_music.volume < 1)
+            {
+                main_music.volume += 0.01f;
+            }
         }
     }
 }

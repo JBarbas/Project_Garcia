@@ -17,6 +17,8 @@ TagManager:
   - EmisionSonido
   - localizationManager
   - ZeroGravityTeam
+  - mainMusic
+  - persiguiendoMusic
   layers:
   - Default
   - TransparentFX
