@@ -1,0 +1,10 @@
+﻿{
+	"items":[
+		{"key":"ZGHAT", "value":"Pulsa E para equipar la gorra ZG"},
+		{"key":"ZAPAPATOS", "value":"Pulsa E para equipar los ZapaPatos"},
+		{"key":"Key Card", "value":"Pulsa E para coger la llave electrónica"},
+		{"key":"test2", "value":"gorra ZG"},
+		{"key":"Door", "value":"Pulsa E para abrir la puerta"},
+		{"key":"NeedKey", "value":"Necesitas una llave para abrir la puerta"}
+	]
+}

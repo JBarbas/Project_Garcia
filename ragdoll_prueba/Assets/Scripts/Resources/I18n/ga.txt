@@ -1,0 +1,14 @@
+back=RETORNAR
+play=XOGAR
+options=OPCIÓNS
+contact=CONTACTO
+exit=SAÍR
+lang=IDIOMA
+sound=SON
+espa=ESPAÑOL
+engl=INGLÉS
+gal=GALEGO
+pause=PAUSA
+resume=RETOMAR
+restart=REINICIAR
+over=FIN DO XOGO

@@ -1,0 +1,14 @@
+back=BACK
+play=PLAY
+options=OPTIONS
+contact=CONTACT
+exit=EXIT
+lang=LANGUAGE
+sound=SOUND
+espa=SPANISH
+engl=ENGLISH
+gal=GALICIAN
+pause=PAUSE
+resume=RESUME
+restart=RESTART
+over=GAME OVER
