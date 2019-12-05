@@ -3171,34 +3171,6 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
-    - target: {fileID: 100070, guid: 41964f4cedbd4564186bf8f16b54319d, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 100238, guid: 41964f4cedbd4564186bf8f16b54319d, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 100240, guid: 41964f4cedbd4564186bf8f16b54319d, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 100242, guid: 41964f4cedbd4564186bf8f16b54319d, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 100244, guid: 41964f4cedbd4564186bf8f16b54319d, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 100246, guid: 41964f4cedbd4564186bf8f16b54319d, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 100480, guid: 41964f4cedbd4564186bf8f16b54319d, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 400482, guid: 41964f4cedbd4564186bf8f16b54319d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -30.69958
@@ -3242,6 +3214,34 @@ PrefabInstance:
     - target: {fileID: 400482, guid: 41964f4cedbd4564186bf8f16b54319d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100070, guid: 41964f4cedbd4564186bf8f16b54319d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100238, guid: 41964f4cedbd4564186bf8f16b54319d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100240, guid: 41964f4cedbd4564186bf8f16b54319d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100242, guid: 41964f4cedbd4564186bf8f16b54319d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100244, guid: 41964f4cedbd4564186bf8f16b54319d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100246, guid: 41964f4cedbd4564186bf8f16b54319d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100480, guid: 41964f4cedbd4564186bf8f16b54319d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400048, guid: 41964f4cedbd4564186bf8f16b54319d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6457,7 +6457,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: b3f3dcbb43f8f5c4bbf207221f919248, type: 3}
 --- !u!1 &150652502 stripped
@@ -30819,7 +30819,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1819438651}
-  m_RootOrder: 26
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1378471653 stripped
 GameObject:
@@ -39662,6 +39662,7 @@ Transform:
   - {fileID: 882579902}
   - {fileID: 314696264}
   - {fileID: 126261716}
+  - {fileID: 1378421343}
   - {fileID: 84088124}
   - {fileID: 2079190501}
   - {fileID: 1942700193}
@@ -39671,7 +39672,6 @@ Transform:
   - {fileID: 1526244669}
   - {fileID: 457244938}
   - {fileID: 55812453}
-  - {fileID: 1378421343}
   - {fileID: 96669980}
   - {fileID: 114836357}
   - {fileID: 1125564340}
