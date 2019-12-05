@@ -36,7 +36,15 @@ public class Patrullar_Raquel : StateMachineBehaviour
         _agent.speed = speed;
         NPC = animator.gameObject;
         player.GetComponent<playerInfo>().state = "safe";
-        waypointPath = waypointPaths[NPC.GetComponent<NPCinfo>().NPCid].transform;
+
+        for (int i = 0; i < waypointPaths.Length; i++)
+        {
+            if (waypointPaths[i].gameObject.name.Equals("WaypointPath_" + NPC.GetComponent<NPCinfo>().name))
+            {
+                waypointPath = waypointPaths[i].transform;
+            }
+        }
+        //waypointPath = waypointPaths[NPC.GetComponent<NPCinfo>().NPCid].transform;
         currentWP = NPC.GetComponent<NPCinfo>().getCurrentWP();
         if (currentWP < waypointPath.childCount)
         {

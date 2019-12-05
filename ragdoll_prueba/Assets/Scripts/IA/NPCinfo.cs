@@ -5,6 +5,7 @@ using UnityEngine;
 public class NPCinfo : MonoBehaviour
 {
     public int NPCid;
+    public string NPCname;
     private int currentWP;
     private bool entregandoCafes;
     private int currentZGmember;

@@ -28,8 +28,16 @@ public class Patrullar : StateMachineBehaviour
         _agent = animator.gameObject.GetComponent<NavMeshAgent>();
         _agent.speed = speed;
         NPC = animator.gameObject;
-        waypointPath = waypointPaths[NPC.GetComponent<NPCinfo>().NPCid].transform;
         player.GetComponent<playerInfo>().state = "safe";
+        for(int i = 0; i < waypointPaths.Length; i++)
+        {
+            if (waypointPaths[i].gameObject.name.Equals("WaypointPath_" + NPC.GetComponent<NPCinfo>().name))
+            {
+                waypointPath = waypointPaths[i].transform;
+                Debug.Log("WaypointPath_" + NPC.GetComponent<NPCinfo>().name);
+            }
+        }
+        //waypointPath = waypointPaths[NPC.GetComponent<NPCinfo>().NPCid].transform;
         currentWP = NPC.GetComponent<NPCinfo>().getCurrentWP();
         nextWP = waypointPath.GetChild(currentWP);
     }
