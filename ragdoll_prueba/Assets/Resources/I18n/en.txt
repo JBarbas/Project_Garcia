@@ -12,3 +12,4 @@ pause=PAUSE
 resume=RESUME
 restart=RESTART
 over=GAME OVER
+credits=CREDITS

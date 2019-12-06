@@ -5,58 +5,45 @@ using UnityEngine.UI;
 
 public class NoiseController : MonoBehaviour
 {
-    public Image n1,n2,n3,n4,n5,n6,n7,n8,n9,n10;
+    public Image n1,n2,n3;
 
-    public float _noise = 0;
+    private float _noise = 0;
+    public GameObject playerInfo;
 
 
     // Update is called once per frame
     void Update()
     {
+       _noise = playerInfo.GetComponent<playerInfo>().intensidadRuido * 100;
         NoiseChange(_noise);
+ 
     }
 
     void NoiseChange(float noiseValue)
     {
-        if(noiseValue >= 10.0f)
+        if (noiseValue < 20)
+        {
+            n1.transform.gameObject.SetActive(false);
+            n2.transform.gameObject.SetActive(false);
+            n3.transform.gameObject.SetActive(false);
+        }
+        else if (noiseValue >= 20.0f && noiseValue < 50.0f) { 
+        
+            n1.transform.gameObject.SetActive(true);
+            n2.transform.gameObject.SetActive(false);
+            n3.transform.gameObject.SetActive(false);
+        }
+        else if (noiseValue >= 50.0f && noiseValue < 75.0f)
         {
             n1.transform.gameObject.SetActive(true);
-        }
-        if (noiseValue >= 20.0f)
-        {
             n2.transform.gameObject.SetActive(true);
+            n3.transform.gameObject.SetActive(false);
         }
-        if (noiseValue >= 30.0f)
+        else
         {
+            n1.transform.gameObject.SetActive(true);
+            n2.transform.gameObject.SetActive(true);
             n3.transform.gameObject.SetActive(true);
-        }
-        if (noiseValue >= 40.0f)
-        {
-            n4.transform.gameObject.SetActive(true);
-        }
-        if (noiseValue >= 50.0f)
-        {
-            n5.transform.gameObject.SetActive(true);
-        }
-        if (noiseValue >= 60.0f)
-        {
-            n6.transform.gameObject.SetActive(true);
-        }
-        if (noiseValue >= 70.0f)
-        {
-            n7.transform.gameObject.SetActive(true);
-        }
-        if (noiseValue >= 80.0f)
-        {
-            n8.transform.gameObject.SetActive(true);
-        }
-        if (noiseValue >= 90.0f)
-        {
-            n9.transform.gameObject.SetActive(true);
-        }
-        if (noiseValue >= 100.0f)
-        {
-            n10.transform.gameObject.SetActive(true);
         }
     }
 }

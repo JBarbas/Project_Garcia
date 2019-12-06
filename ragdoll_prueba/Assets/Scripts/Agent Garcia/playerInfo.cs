@@ -8,7 +8,7 @@ public class playerInfo : MonoBehaviour
 {
     public float ruidoAgachado = 0.15f;
     public float ruidoCaminandoAgachado = 0.25f;
-    public float ruidoCaminando = 0.5f;
+    public float ruidoCaminando = 0.45f;
     public float ruidoCorriendoAgachado = 0.75f;
     public float ruidoCorriendo = 1;
 
@@ -53,7 +53,7 @@ public class playerInfo : MonoBehaviour
 
         if (planking)
         {
-            Debug.Log("planking obj");
+            //Debug.Log("planking obj");
             objPlanking.transform.gameObject.SetActive(true);
         }
         else if (inStatue)

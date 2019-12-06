@@ -12,6 +12,8 @@ public class MenuPrincipal : MonoBehaviour
 
     public void QuitGame()
     {
-        Application.Quit();
+        SceneManager.LoadScene("Creditos");
     }
+
+
 }

@@ -24,19 +24,22 @@ public class Escuchar : StateMachineBehaviour
         _agent.speed = speed;
         NPC = animator.gameObject;
         playerInfo.GetComponent<playerInfo>().state = "miss";
+
+        animator.SetBool("esperando", false);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        animator.SetBool("escuchandoAlgo", false);
+
         _agent.SetDestination(NPC.GetComponent<SoundReceiver>().lastPos);
 
         /*codigo de https://answers.unity.com/questions/324589/how-can-i-tell-when-a-navmesh-has-reached-its-dest.html*/
         distanceToPathEnd = _agent.remainingDistance;
-        if (distanceToPathEnd != Mathf.Infinity && _agent.pathStatus == NavMeshPathStatus.PathComplete && _agent.remainingDistance == 0)
+        if (distanceToPathEnd != Mathf.Infinity && _agent.pathStatus == NavMeshPathStatus.PathComplete && _agent.remainingDistance == 2.0f)
         {
-            animator.SetBool("terminadoEscuchar", true);
-            animator.SetBool("escuchandoAlgo", false);
+            animator.SetBool("terminadoEscuchar", true);          
         }    
     }
 }

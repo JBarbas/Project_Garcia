@@ -10,8 +10,6 @@ public class ClockDigital : MonoBehaviour
     public float hour = 0.0f, min = 0.0f, sec = 0.0f;
     public string hora, minuto, segundo;
 
-    
-
 public void Update()
     {
         {
@@ -53,7 +51,7 @@ public void Update()
             }
 
             //defino la hora en el campo texto a cada vuelta
-            //textClock.text = hora + ":" + minuto + ":" + segundo;
+            textClock.text = hora + ":" + minuto + ":" + segundo;
 
         }
     }

@@ -12,3 +12,4 @@ pause=PAUSA
 resume=RETOMAR
 restart=REINICIAR
 over=FIN DO XOGO
+credits=CREDITOS

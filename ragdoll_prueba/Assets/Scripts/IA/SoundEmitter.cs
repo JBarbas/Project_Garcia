@@ -41,9 +41,6 @@ public class SoundEmitter : MonoBehaviour
         receiverDic.Remove(objId);
     }
 
-    // TODO
-    // Comprobar que el Player está corriendo para que se emita e sonido
-
     public void OnTriggerStay(Collider other)
     {
         SoundReceiver receiver;
@@ -59,6 +56,7 @@ public class SoundEmitter : MonoBehaviour
     
     public void Emit()
     {
+        Debug.Log(soundIntensity);
         GameObject srObj;
         Vector3 srPos;
         float intensity;

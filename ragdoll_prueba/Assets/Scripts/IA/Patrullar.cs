@@ -34,7 +34,6 @@ public class Patrullar : StateMachineBehaviour
             if (waypointPaths[i].gameObject.name.Equals("WaypointPath_" + NPC.GetComponent<NPCinfo>().name))
             {
                 waypointPath = waypointPaths[i].transform;
-                Debug.Log("WaypointPath_" + NPC.GetComponent<NPCinfo>().name);
             }
         }
         //waypointPath = waypointPaths[NPC.GetComponent<NPCinfo>().NPCid].transform;
