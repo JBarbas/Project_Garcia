@@ -116,7 +116,7 @@ public class DuckBehaviour : MonoBehaviour
             startCounter = false;
             counter = 0f;
             // Los patos tendrán el doble de la velocidad del jugador
-            _agent.speed = 2;
+            _agent.speed = 3.5f;
             // Los patos se detendrán cuando estén a esta distancia de su objetivo
             _agent.stoppingDistance = 0.2f;
 

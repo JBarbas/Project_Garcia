@@ -20,6 +20,7 @@ public class dirPelvis : MonoBehaviour
     private bool jumping = false;
     public bool running = false;
     public bool onStairs = false;
+    public float speedStairs = 1.0f;
     private Vector3 origin;
     private bool moveFront = false;
     private bool moveLeft = false;
@@ -123,7 +124,7 @@ public class dirPelvis : MonoBehaviour
             {
                 running = true;
             }
-            else if (Input.GetKeyUp("left shift"))
+            if (Input.GetKeyUp("left shift") || !(moveFront || moveLeft || moveBack || moveRight))
             {
                 running = false;
             }
@@ -180,7 +181,7 @@ public class dirPelvis : MonoBehaviour
         float up = 0.0f;
         if (onStairs)
         {
-            up = 1.0f;
+            up = speedStairs;
         }
         if (running)
         {

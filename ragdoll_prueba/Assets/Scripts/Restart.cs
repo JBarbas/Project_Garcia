@@ -19,6 +19,8 @@ public class Restart : MonoBehaviour
 
     public void restart()
     {
+        PlayerInventory.equipedDAC = "none";
+        PlayerInventory.hasKey = false;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1f;

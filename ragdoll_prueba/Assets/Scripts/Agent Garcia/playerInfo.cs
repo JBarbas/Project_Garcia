@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class playerInfo : MonoBehaviour
 {
@@ -20,9 +21,14 @@ public class playerInfo : MonoBehaviour
     public bool agachado;
     public bool corriendo;
     public bool caminando;
+    public bool planking;
+    public bool inStatue;
 
     public AudioSource main_music;
     public AudioSource persiguiendo_music;
+
+    public GameObject objPlanking, objStatue, objPuntero, objGorra, objPatos;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +42,24 @@ public class playerInfo : MonoBehaviour
         agachado = pecho.GetComponent<Agacharse>().agachado;
         corriendo = pelvis.GetComponent<dirPelvis>().running;
         caminando = pelvis.GetComponent<dirPelvis>().isMoving();
+        planking = pelvis.GetComponent<dirPelvis>().isPlanking();
+        inStatue = pelvis.GetComponent<dirPelvis>().inStatue;
+
+        objPlanking.transform.gameObject.SetActive(false);
+        objStatue.transform.gameObject.SetActive(false);
+        objPuntero.transform.gameObject.SetActive(false);
+        objPatos.transform.gameObject.SetActive(false);
+        objGorra.transform.gameObject.SetActive(false);
+
+        if (planking)
+        {
+            Debug.Log("planking obj");
+            objPlanking.transform.gameObject.SetActive(true);
+        }
+        else if (inStatue)
+        {
+            objStatue.transform.gameObject.SetActive(true);
+        }
 
         if (agachado)
         {

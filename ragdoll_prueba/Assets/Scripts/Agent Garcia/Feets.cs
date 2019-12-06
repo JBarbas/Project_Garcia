@@ -40,6 +40,7 @@ public class Feets : MonoBehaviour
         if (other.tag.Equals("stairs"))
         {
             characterController.onStairs = true;
+            characterController.speedStairs = other.GetComponent<StairsController>().speed;
         }
     }
 

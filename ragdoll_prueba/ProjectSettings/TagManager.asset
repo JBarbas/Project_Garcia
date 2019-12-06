@@ -21,6 +21,12 @@ TagManager:
   - persiguiendoMusic
   - stairs
   - GameOverMenu
+  - head
+  - leftFoot
+  - rightFoot
+  - hand
+  - interactionText
+  - equipedDAC
   layers:
   - Default
   - TransparentFX
@@ -35,8 +41,8 @@ TagManager:
   - control
   - ground
   - waypoint
-  - 
-  - 
+  - ragdollHands
+  - wallAndGround
   - 
   - 
   - 

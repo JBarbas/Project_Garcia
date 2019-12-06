@@ -11,7 +11,7 @@ public class PlayerInventory : MonoBehaviour
     private void Start()
     {
         hasKey = false;
-        equipedDAC = "Gorra";
+        equipedDAC = "none";
     }
 
 }

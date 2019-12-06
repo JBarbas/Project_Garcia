@@ -49,12 +49,12 @@ public class DuckGenerator : MonoBehaviour
     void Update()
     {
         // Si el jugador usa la tecla interactuar
-        if (Input.GetKeyDown(KeyCode.E) && PlayerInventory.equipedDAC == "ZAPAPATOS")
+        if (PlayerInventory.equipedDAC == "ZAPAPATOS")
         {
             // En el radio del generador de patos, lo siguen
             if (Vector3.Distance(player.transform.position, transform.position) <= spawnZone)
             {
-                followPlayer = !followPlayer;
+                followPlayer = true;
                 if (!followPlayer)
                     for (int i = 0; i < numDucks; i++)
                     {
@@ -65,7 +65,7 @@ public class DuckGenerator : MonoBehaviour
             // Mientras lo siguen, dejan de seguirlo
             else if (followPlayer)
             {
-                followPlayer = !followPlayer;
+                //followPlayer = !followPlayer;
                 for (int i = 0; i < numDucks; i++)
                 {
                     allDucks[i].GetComponent<DuckBehaviour>()._agent.SetDestination(posicionAleatoriaEnRadio());
@@ -73,6 +73,10 @@ public class DuckGenerator : MonoBehaviour
                 }
             }
 
+        }
+        else
+        {
+            followPlayer = false;
         }
         // Si siguen al jugador
         if (followPlayer) {
@@ -97,7 +101,7 @@ public class DuckGenerator : MonoBehaviour
             else
             {
                 // Si al menos un pato puede, los que no probarán a posicionarse del otro lado
-                Vector3 posPlayer = new Vector3(player.transform.position.x, 0, player.transform.position.z);
+                Vector3 posPlayer = new Vector3(player.transform.position.x, 7.798413f, player.transform.position.z);
 
                 NavMeshHit hit;
                 NavMesh.SamplePosition(posPlayer + (player.transform.forward + new Vector3(0, 0, 2.5f)) / 3, out hit, spawnZone, NavMesh.AllAreas);
