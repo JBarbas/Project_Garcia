@@ -11,16 +11,19 @@ public class GameOverMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.G))
+        if (/*Input.GetKeyDown(KeyCode.G) ||*/
+            GameObject.FindGameObjectWithTag("playerInfo").gameObject.GetComponent<playerInfo>().state == "dead")
         {
-            if (GameIsPaused)
+            /*if (GameIsPaused)
             {
                 Restart();
             }
             else
             {
                 Pause();
-            }
+            }*/
+            GameObject.FindGameObjectWithTag("playerInfo").gameObject.GetComponent<playerInfo>().state = "safe";
+            Pause();
         }
     }
 

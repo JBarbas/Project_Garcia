@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class playerInfo : MonoBehaviour
 {
@@ -72,7 +73,14 @@ public class playerInfo : MonoBehaviour
             intensidadRuido = 0;
         }
 
-        if (state.Equals("in danger"))
+        if (state.Equals("dead"))
+        {
+            /*Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            GameOverMenu.SetActive(true);
+            Time.timeScale = 0f;*/
+        }
+        else if (state.Equals("in danger"))
         {
             if (persiguiendo_music.volume < 1)
             {

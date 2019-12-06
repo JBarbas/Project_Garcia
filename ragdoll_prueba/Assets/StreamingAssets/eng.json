@@ -3,8 +3,13 @@
 		{"key":"ZGHAT", "value":"Press E to wear ZG hat"},
 		{"key":"ZAPAPATOS", "value":"Press E to wear DuckShoes"},
 		{"key":"Key Card", "value":"Press E to pick Key Card"},
-		{"key":"test2", "value":"ZG hat"},
-		{"key":"Door", "value":"Press E to open Door"},
-		{"key":"NeedKey", "value":"Necesitas una llave para abrir la puerta"}
+		
+		
+		{"key":"Tut1", "value":"Agente, para cumplir su misión deberá adentrarse en los más profundo de los estudios de Zero Gravity."},
+		{"key":"Tut2", "value":"Zero Gravity utiliza un sistema de seguridad muy eficiente, basado en el uso de llaves electrónicas, que habrán sacado de alguno de esos violentos videojuegos"},
+		{"key":"Tut3", "value":"Encuentre estas llaves, agente, y las puertas secretas que llevan a la siguiente zona."},
+		
+		
+		{"key":"test2", "value":"ZG hat"}
 	]
 }

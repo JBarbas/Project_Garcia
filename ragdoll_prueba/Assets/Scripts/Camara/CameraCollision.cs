@@ -29,7 +29,7 @@ public class CameraCollision : MonoBehaviour {
 
         if (Physics.Linecast(transform.parent.position, desiredCameraPos, out hit))
         {
-            if (hit.transform.gameObject.layer != 9)
+            if (hit.transform.gameObject.layer != 9 && hit.transform.gameObject.isStatic)
             {
                 distance = Mathf.Clamp((hit.distance * 0.87f), minDistance, maxDistance);
             }

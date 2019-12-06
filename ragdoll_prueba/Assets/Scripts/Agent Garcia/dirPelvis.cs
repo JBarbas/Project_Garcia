@@ -29,6 +29,9 @@ public class dirPelvis : MonoBehaviour
     public bool plankingMade = false;
     public Transform plankingTarget;
     private float targetRotation;
+    public bool inStatue = false;
+    public Transform statueTarget;
+    private bool statueMade = false;
 
     public Vector3 JumpVector;
 
@@ -75,7 +78,7 @@ public class dirPelvis : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!planking)
+        if (!planking && !inStatue)
         {
             targetRotation = camera.transform.eulerAngles.y;
 
@@ -154,7 +157,15 @@ public class dirPelvis : MonoBehaviour
                 transform.position = Vector3.MoveTowards(transform.position, plankingTarget.position, step);
             }
         }
-        if (moveFront || moveLeft || moveBack || moveRight && !planking)
+        else if (inStatue)
+        {
+            if (!statueMade)
+            {
+                float step = rotateSpeed * Time.deltaTime;
+                transform.position = Vector3.MoveTowards(transform.position, statueTarget.position, step);
+            }
+        }
+        if (moveFront || moveLeft || moveBack || moveRight && !planking && !inStatue)
         {
             Vector3 currentPos = transform.position;
             transform.position = origin;

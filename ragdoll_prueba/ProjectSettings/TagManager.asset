@@ -19,6 +19,8 @@ TagManager:
   - ZeroGravityTeam
   - mainMusic
   - persiguiendoMusic
+  - stairs
+  - GameOverMenu
   layers:
   - Default
   - TransparentFX
