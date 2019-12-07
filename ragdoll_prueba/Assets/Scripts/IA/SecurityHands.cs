@@ -8,6 +8,7 @@ public class SecurityHands : MonoBehaviour
     public GameObject Security;
     public int Force = 200;
     public Rigidbody pelvis;
+    public bool killWithChase = false;
 
     IEnumerator Die()
     {
@@ -32,6 +33,12 @@ public class SecurityHands : MonoBehaviour
         if (collision.gameObject.tag.Equals("Agent Garcia"))
         {
             if (Security.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Golpear"))
+            {
+                pelvis.freezeRotation = false;
+                pelvis.AddForce(new Vector3(Security.transform.forward.x, 1, Security.transform.forward.z) * Force, ForceMode.Impulse);
+                StartCoroutine(Die());
+            }
+            else if (killWithChase && Security.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Perseguir"))
             {
                 pelvis.freezeRotation = false;
                 pelvis.AddForce(new Vector3(Security.transform.forward.x, 1, Security.transform.forward.z) * Force, ForceMode.Impulse);

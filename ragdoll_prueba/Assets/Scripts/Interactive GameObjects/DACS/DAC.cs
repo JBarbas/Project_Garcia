@@ -14,6 +14,8 @@ public class DAC : InteractiveItem
     private GameObject pointer;
     private GameObject pointerOn;
 
+    public AudioSource soundZapapatos;
+
     private GameObject player;
     private bool canLeave = true;
     private bool interacted = false;
@@ -113,6 +115,10 @@ public class DAC : InteractiveItem
             if (Input.GetKeyDown(KeyCode.E) && canLeave)
             {
                 onInteract();
+                if (itemName.Equals("ZAPAPATOS"))
+                {
+                    soundZapapatos.Play();
+                }
                 interacted = true;
                 canLeave = false;
             }

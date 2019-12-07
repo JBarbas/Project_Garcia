@@ -60,6 +60,18 @@ public class playerInfo : MonoBehaviour
         {
             objStatue.transform.gameObject.SetActive(true);
         }
+        else if (PlayerInventory.equipedDAC.Equals("ZAPAPATOS")) 
+        {
+            objPatos.transform.gameObject.SetActive(true);
+        }
+        else if (PlayerInventory.equipedDAC.Equals("ZGHAT"))
+        {
+            objGorra.transform.gameObject.SetActive(true);
+        }
+        else if (PlayerInventory.equipedDAC.Equals("Pointer"))
+        {
+            objPuntero.transform.gameObject.SetActive(true);
+        }
 
         if (agachado)
         {
