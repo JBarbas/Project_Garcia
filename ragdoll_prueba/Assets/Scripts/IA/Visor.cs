@@ -74,6 +74,10 @@ public class Visor : MonoBehaviour
             }
 
             if(hit.collider.gameObject.tag.Equals("Agent Garcia")){
+
+                animator.SetBool("alarma", false);
+                SoundReceiver.setAlarm(false);
+
                 if (!animator.GetBool("viendoJugador") && ehDangerAllowed)
                 {
                     ehDanger.Play();

@@ -5,6 +5,7 @@ using UnityEngine;
 public class SoundReceiver : MonoBehaviour
 {
     public float soundThreshold;
+    private static bool alarm;
     public Vector3 lastPos;
     public GameObject receiver;
     public AudioSource eh;
@@ -17,13 +18,9 @@ public class SoundReceiver : MonoBehaviour
         if (receiver.tag.Equals("cow"))
         {
 
-            if (DuckGenerator.duckIsNearPlayer)
+            if (!DuckGenerator.duckIsNearPlayer)
             {
-                Debug.Log("TE ESCUCHO CHUCHOOOOOOOOOOOOOOOO");
-
-            }else
-            {
-                Debug.Log("Los patos estan lejos wwwwey");
+                alarm = true;
             }
 
         }
@@ -61,5 +58,15 @@ public class SoundReceiver : MonoBehaviour
                 //calla chucho que no te escucho
             }
         }   
+    }
+
+    public static bool getAlarm()
+    {
+        return alarm;
+    }
+
+    public static void setAlarm(bool alarma)
+    {
+        alarm = alarma;
     }
 }
