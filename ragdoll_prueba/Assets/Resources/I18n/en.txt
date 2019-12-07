@@ -13,3 +13,5 @@ resume=RESUME
 restart=RESTART
 over=GAME OVER
 credits=CREDITS
+tutorials=TUTORIALS
+effects=EFFECTS

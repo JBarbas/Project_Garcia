@@ -51,7 +51,7 @@ public void Update()
             }
 
             //defino la hora en el campo texto a cada vuelta
-            //textClock.text = hora + ":" + minuto + ":" + segundo;
+            textClock.text = hora + ":" + minuto + ":" + segundo;
 
         }
     }

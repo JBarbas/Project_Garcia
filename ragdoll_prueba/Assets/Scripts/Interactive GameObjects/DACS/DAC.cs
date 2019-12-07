@@ -33,7 +33,6 @@ public class DAC : InteractiveItem
         player = GameObject.FindGameObjectWithTag("Agent Garcia");
 
         interactionText = GameObject.FindGameObjectWithTag("interactionText").GetComponent<Text>();
-        Debug.Log("Hola");
     }
 
     override

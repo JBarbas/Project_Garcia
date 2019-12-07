@@ -23,7 +23,6 @@ public class LeftHand : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("holding: " + holding + ", canHold: " + canHold);
         if (!holding && canHold)
         {
             SpringJoint sp = gameObject.AddComponent<SpringJoint>();

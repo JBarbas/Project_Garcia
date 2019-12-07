@@ -27,7 +27,6 @@ public class PickUp : InteractiveItem
 
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("sale");
         if (other.gameObject.tag == "Agent Garcia")
         {
             interactionText.text = "";

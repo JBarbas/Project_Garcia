@@ -56,7 +56,6 @@ public class SoundEmitter : MonoBehaviour
     
     public void Emit()
     {
-        Debug.Log(soundIntensity);
         GameObject srObj;
         Vector3 srPos;
         float intensity;

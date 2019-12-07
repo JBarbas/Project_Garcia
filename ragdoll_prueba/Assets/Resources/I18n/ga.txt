@@ -1,4 +1,4 @@
-back=RETORNAR
+﻿back=RETORNAR
 play=XOGAR
 options=OPCIÓNS
 contact=CONTACTO
@@ -13,3 +13,5 @@ resume=RETOMAR
 restart=REINICIAR
 over=FIN DO XOGO
 credits=CREDITOS
+tutorials=TITORIAIS
+effects=EFECTOS

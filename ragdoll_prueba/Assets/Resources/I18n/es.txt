@@ -13,3 +13,5 @@ resume=REANUDAR
 restart=REINICIAR
 over=FIN DEL JUEGO
 credits=CREDITOS
+tutorials=TUTORIALES
+effects=EFECTOS
