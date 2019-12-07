@@ -32,13 +32,12 @@ public class Visor : MonoBehaviour
     {
         animator = agent.GetComponent<Animator>();
         agentGarcia = GameObject.FindGameObjectWithTag("Agent Garcia");
+
     }
 
     void Update()
     {
-        //Debug.Log(animator.GetBool("viendoJugador"));
         animator.SetFloat("distanciaJugador", (agent.transform.position - agentGarcia.transform.position).magnitude );
-        //Debug.Log(animator.GetFloat("distanciaJugador"));
 
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Buscar") && ehConfusionAllowed && !ehDanger.isPlaying)
         {
@@ -81,12 +80,28 @@ public class Visor : MonoBehaviour
                     ehDangerAllowed = false;
                     StartCoroutine(allowEhDanger());
                 }
-                animator.SetBool("esperando", false);
-                animator.SetBool("viendoJugador", true);
-                animator.SetTrigger("aPerseguir");
-            }   
-        }
+
+                if(!playerInfo.isStatue() && !playerInfo.isPlanking())
+                {
+                    if (agent.tag.Equals("Security") && !(PlayerInventory.equipedDAC.Equals("ZGHAT")))
+                    {
+                        animator.SetBool("esperando", false);
+                        animator.SetBool("viendoJugador", true);
+                        animator.SetTrigger("aPerseguir");
+
+                    }
+
+                    if(agent.tag.Equals("ZeroGravityTeam")){
+
+                        animator.SetBool("esperando", false);
+                        animator.SetBool("viendoJugador", true);
+                        animator.SetTrigger("aPerseguir");
+                    }
+                }
+            }                                                       
+        }   
     }
+    
 
     void OnTriggerExit(Collider other)
     {

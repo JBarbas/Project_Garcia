@@ -33,13 +33,21 @@ public class Escuchar : StateMachineBehaviour
     {
         animator.SetBool("escuchandoAlgo", false);
 
-        _agent.SetDestination(NPC.GetComponent<SoundReceiver>().lastPos);
-
-        /*codigo de https://answers.unity.com/questions/324589/how-can-i-tell-when-a-navmesh-has-reached-its-dest.html*/
-        distanceToPathEnd = _agent.remainingDistance;
-        if (distanceToPathEnd != Mathf.Infinity && _agent.pathStatus == NavMeshPathStatus.PathComplete && _agent.remainingDistance == 2.0f)
+        if(playerInfo.GetComponent<playerInfo>().plank || playerInfo.GetComponent<playerInfo>().statue)
         {
-            animator.SetBool("terminadoEscuchar", true);          
-        }    
+            animator.SetBool("terminadoEscuchar", true);
+
+        }else
+        {
+            _agent.SetDestination(NPC.GetComponent<SoundReceiver>().lastPos);
+
+            /*codigo de https://answers.unity.com/questions/324589/how-can-i-tell-when-a-navmesh-has-reached-its-dest.html*/
+            distanceToPathEnd = _agent.remainingDistance;
+            if (distanceToPathEnd != Mathf.Infinity && _agent.pathStatus == NavMeshPathStatus.PathPartial ||
+                _agent.pathStatus == NavMeshPathStatus.PathComplete && _agent.remainingDistance <= 4.0f)
+            {
+                animator.SetBool("terminadoEscuchar", true);
+            }
+        }      
     }
 }

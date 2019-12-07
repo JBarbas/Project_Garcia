@@ -21,8 +21,11 @@ public class playerInfo : MonoBehaviour
     public bool agachado;
     public bool corriendo;
     public bool caminando;
-    public bool planking;
-    public bool inStatue;
+    public static bool planking;
+    public static bool inStatue;
+    public bool plank;
+    public bool statue;
+    public bool gorra;
 
     public AudioSource main_music;
     public AudioSource persiguiendo_music;
@@ -44,6 +47,8 @@ public class playerInfo : MonoBehaviour
         caminando = pelvis.GetComponent<dirPelvis>().isMoving();
         planking = pelvis.GetComponent<dirPelvis>().isPlanking();
         inStatue = pelvis.GetComponent<dirPelvis>().inStatue;
+        plank = pelvis.GetComponent<dirPelvis>().isPlanking();
+        statue =  pelvis.GetComponent<dirPelvis>().inStatue;
 
         objPlanking.transform.gameObject.SetActive(false);
         objStatue.transform.gameObject.SetActive(false);
@@ -54,8 +59,8 @@ public class playerInfo : MonoBehaviour
 
         if (planking)
         {
-            //Debug.Log("planking obj");
             objPlanking.transform.gameObject.SetActive(true);
+
         }
         else if (inStatue)
         {
@@ -64,6 +69,7 @@ public class playerInfo : MonoBehaviour
         else if (PlayerInventory.equipedDAC == "ZAPAPATOS") 
         {
             objPatos.transform.gameObject.SetActive(true);
+
         }
         else if (PlayerInventory.equipedDAC == "ZGHAT")
         {
@@ -72,14 +78,19 @@ public class playerInfo : MonoBehaviour
         else if (PlayerInventory.equipedDAC == "Pointer")
         {
             objPuntero.transform.gameObject.SetActive(true);
+
         }
         else if (PlayerInventory.hasKey)
         {
             objLlave.transform.gameObject.SetActive(true);
+
         }
 
-        if (agachado)
+        if (planking || inStatue)
         {
+            intensidadRuido = 0;
+
+        }else if (agachado){
 
             if (caminando)
             {
@@ -143,5 +154,15 @@ public class playerInfo : MonoBehaviour
                 main_music.volume += 0.01f;
             }
         }
+    }
+
+    public static bool isStatue()
+    {
+        return inStatue;
+    }
+
+    public static bool isPlanking()
+    {
+        return planking;
     }
 }

@@ -47,7 +47,11 @@ public class SoundEmitter : MonoBehaviour
         receiver = other.gameObject.GetComponent<SoundReceiver>();
         if (receiver == null)
             return;
-        Emit();
+        if (!playerInfo.GetComponent<playerInfo>().plank && !playerInfo.GetComponent<playerInfo>().statue)
+        {
+            Emit();
+        }
+        
     }
     void Update()
     {
@@ -70,7 +74,7 @@ public class SoundEmitter : MonoBehaviour
             intensity -= soundAttenuation * distance;
             if (intensity < sr.soundThreshold)
                 continue;
-            sr.Receive(intensity, emitterPos);
+            sr.Receive(intensity, emitterPos, emitterObject);
         }
     }
 }

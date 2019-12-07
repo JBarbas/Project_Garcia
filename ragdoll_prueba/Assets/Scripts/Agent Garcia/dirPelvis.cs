@@ -172,6 +172,8 @@ public class dirPelvis : MonoBehaviour
 
         if (planking)
         {
+            moving = false;
+            running = false;
             Vector3 currentPos = transform.position;
             transform.position = origin;
             Quaternion desiredRotation = Quaternion.Euler(-180, targetRotation - 180, 0);
@@ -185,6 +187,8 @@ public class dirPelvis : MonoBehaviour
         }
         else if (inStatue)
         {
+            moving = false;
+            running = false;
             if (!statueMade)
             {
                 float step = rotateSpeed * Time.deltaTime;

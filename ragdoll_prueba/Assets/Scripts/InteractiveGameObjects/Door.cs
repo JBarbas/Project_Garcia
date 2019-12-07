@@ -11,7 +11,6 @@ public class Door : InteractiveItem
     override
     public void onInteract()
     {
-        Debug.Log("onInteract");
         interactionText.text = "";
         GetComponent<Rigidbody>().isKinematic = false;
         GetComponent<Rigidbody>().AddForceAtPosition(-kickForce, GetComponentInParent<Transform>().position + new Vector3(0,1,0));
@@ -24,7 +23,6 @@ public class Door : InteractiveItem
         {
             if ( (PlayerInventory.hasKey || !needsKey))
             {
-                Debug.Log("tiene llave");
                 interactionText.text = LocalizationManager.instance.getValue("Door");
                 if (Input.GetKeyDown(KeyCode.E))
                 {
@@ -35,7 +33,6 @@ public class Door : InteractiveItem
             else if (needsKey)
             {
                 interactionText.text = LocalizationManager.instance.getValue("NeedKey");
-                Debug.Log("necesita llave");
             }
         }
     }

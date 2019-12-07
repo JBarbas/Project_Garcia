@@ -9,7 +9,7 @@ public class SoundReceiver : MonoBehaviour
     public GameObject receiver;
     public AudioSource eh;
 
-    public void Receive(float intensity, Vector3 position)
+    public void Receive(float intensity, Vector3 position, GameObject emmiterObject)
     {
         lastPos = position;
         receiver.GetComponent<Animator>().SetBool("escuchandoAlgo", true);
