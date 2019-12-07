@@ -7,6 +7,7 @@ public class SoundReceiver : MonoBehaviour
     public float soundThreshold;
     public Vector3 lastPos;
     public GameObject receiver;
+    public AudioSource eh;
 
     public void Receive(float intensity, Vector3 position)
     {
@@ -15,10 +16,15 @@ public class SoundReceiver : MonoBehaviour
 
         float distance = (receiver.transform.position - position).magnitude;
 
-        if(intensity <= 0.15)
+        if (intensity <= 0.15)
         {
 
-        }else if(0.15 < intensity && intensity <= 0.25 && distance < 4)
+        }
+        else if (!receiver.GetComponent<Animator>().GetBool("escuchandoAlgo"))
+        {
+            eh.Play();
+        }
+        else if(0.15 < intensity && intensity <= 0.25 && distance < 4)
         {
             receiver.GetComponent<Animator>().SetBool("escuchandoAlgo", true);
         }

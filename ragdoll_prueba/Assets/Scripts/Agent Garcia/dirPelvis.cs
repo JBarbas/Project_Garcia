@@ -36,6 +36,11 @@ public class dirPelvis : MonoBehaviour
 
     public Vector3 JumpVector;
 
+    public AudioSource runningSound;
+    public AudioSource walkingSound;
+    public AudioSource randomSound;
+    public AudioClip[] jumpAudioSources;
+
     public bool getJumping()
     {
         return jumping;
@@ -54,6 +59,23 @@ public class dirPelvis : MonoBehaviour
     public void setPlanking(bool planking)
     {
         this.planking = planking;
+    }
+
+    public void setMoveFront (bool move)
+    {
+        this.moveFront = move;
+    }
+    public void setMoveBack (bool move)
+    {
+        this.moveBack = move;
+    }
+    public void setMoveLeft (bool move)
+    {
+        this.moveLeft = move;
+    }
+    public void setMoveRight (bool move)
+    {
+        this.moveRight = move;
     }
 
     IEnumerator RotatePelvis(float targetRotation)
@@ -83,50 +105,53 @@ public class dirPelvis : MonoBehaviour
         {
             targetRotation = camera.transform.eulerAngles.y;
 
-            if (Input.GetKeyDown("w"))
+            if (!Application.isMobilePlatform)
             {
-                moveFront = true;
-            }
-            else if (Input.GetKeyUp("w"))
-            {
-                moveFront = false;
-            }
-            if (Input.GetKeyDown("a"))
-            {
-                moveLeft = true;
-            }
-            else if (Input.GetKeyUp("a"))
-            {
-                moveLeft = false;
-            }
-            if (Input.GetKeyDown("s"))
-            {
-                moveBack = true;
-            }
-            else if (Input.GetKeyUp("s"))
-            {
-                moveBack = false;
-            }
-            if (Input.GetKeyDown("d"))
-            {
-                moveRight = true;
-            }
-            else if (Input.GetKeyUp("d"))
-            {
-                moveRight = false;
-            }
-            if (Input.GetKeyDown("space") && !jumping)
-            {
-                jumping = true;
-                jump();
-            }
-            if (Input.GetKeyDown("left shift"))
-            {
-                running = true;
-            }
-            if (Input.GetKeyUp("left shift") || !(moveFront || moveLeft || moveBack || moveRight))
-            {
-                running = false;
+                if (Input.GetKeyDown("w"))
+                {
+                    moveFront = true;
+                }
+                else if (Input.GetKeyUp("w"))
+                {
+                    moveFront = false;
+                }
+                if (Input.GetKeyDown("a"))
+                {
+                    moveLeft = true;
+                }
+                else if (Input.GetKeyUp("a"))
+                {
+                    moveLeft = false;
+                }
+                if (Input.GetKeyDown("s"))
+                {
+                    moveBack = true;
+                }
+                else if (Input.GetKeyUp("s"))
+                {
+                    moveBack = false;
+                }
+                if (Input.GetKeyDown("d"))
+                {
+                    moveRight = true;
+                }
+                else if (Input.GetKeyUp("d"))
+                {
+                    moveRight = false;
+                }
+                if (Input.GetKeyDown("space") && !jumping)
+                {
+                    jumping = true;
+                    jump();
+                }
+                if (Input.GetKeyDown("left shift"))
+                {
+                    running = true;
+                }
+                if (Input.GetKeyUp("left shift") || !(moveFront || moveLeft || moveBack || moveRight))
+                {
+                    running = false;
+                }
             }
         }
 
@@ -186,10 +211,31 @@ public class dirPelvis : MonoBehaviour
         if (running)
         {
             rb.AddForce(new Vector3(-transform.forward.x, up, -transform.forward.z) * runSpeed);
+            if (!runningSound.isPlaying)
+            {
+                runningSound.Play();
+                walkingSound.Stop();
+            }
         }
         else if (moveFront || moveLeft || moveBack || moveRight)
         {
             rb.AddForce(new Vector3(-transform.forward.x, up, -transform.forward.z) * walkSpeed);
+            runningSound.Stop();
+            if (!walkingSound.isPlaying)
+            {
+                walkingSound.Play();
+            }
+        }
+        else
+        {
+            runningSound.Stop();
+            walkingSound.Stop();
+        }
+
+        if (jumping)
+        {
+            runningSound.Stop();
+            walkingSound.Stop();
         }
     }
 
@@ -206,6 +252,8 @@ public class dirPelvis : MonoBehaviour
     {
         //rb.AddForce(new Vector3(0, jumpForce * 100, 0), ForceMode.Impulse);
         rb.AddForce(JumpVector * jumpForce * 100, ForceMode.Impulse);
+        randomSound.clip = jumpAudioSources[Random.Range(0, jumpAudioSources.Length)];
+        randomSound.Play();
     }
 
     public void exitPlanking()

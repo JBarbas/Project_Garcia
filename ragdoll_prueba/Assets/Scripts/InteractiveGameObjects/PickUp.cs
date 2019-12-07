@@ -9,9 +9,6 @@ public class PickUp : InteractiveItem
     public void onInteract()
     {
         interactionText.text = "";
-        Color temp = interactionImage.color;
-        temp.a = 1f;
-        interactionImage.color = temp;
         PlayerInventory.hasKey = true;
         Destroy(this.gameObject);
     }

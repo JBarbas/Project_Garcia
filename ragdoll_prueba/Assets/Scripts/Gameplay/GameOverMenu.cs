@@ -8,6 +8,8 @@ public class GameOverMenu : MonoBehaviour
 
     public GameObject gameOverMenuUI, gameplayMenuUI;
 
+    public AudioSource deadSound;
+
     // Update is called once per frame
     void Update()
     {
@@ -40,6 +42,7 @@ public class GameOverMenu : MonoBehaviour
 
     void Pause()
     {
+        deadSound.Play();
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         gameplayMenuUI.SetActive(false);

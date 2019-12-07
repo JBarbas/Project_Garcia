@@ -10,6 +10,8 @@ public class SecurityHands : MonoBehaviour
     public Rigidbody pelvis;
     public bool killWithChase = false;
 
+    public AudioSource punchSound;
+
     IEnumerator Die()
     {
         yield return new WaitForSeconds(1);
@@ -36,6 +38,7 @@ public class SecurityHands : MonoBehaviour
             {
                 pelvis.freezeRotation = false;
                 pelvis.AddForce(new Vector3(Security.transform.forward.x, 1, Security.transform.forward.z) * Force, ForceMode.Impulse);
+                punchSound.Play();
                 StartCoroutine(Die());
             }
             else if (killWithChase && Security.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Perseguir"))
@@ -46,4 +49,5 @@ public class SecurityHands : MonoBehaviour
             }
         }
     }
+
 }

@@ -10,6 +10,24 @@ public class Visor : MonoBehaviour
     public GameObject agentGarcia;
     private Animator animator;
 
+    public AudioSource ehConfusion;
+    public AudioSource ehDanger;
+
+    private bool ehConfusionAllowed = true;
+    private bool ehDangerAllowed = true;
+
+    IEnumerator allowEhConfusion()
+    {
+        yield return new WaitForSeconds(5);
+        ehConfusionAllowed = true;
+    }
+
+    IEnumerator allowEhDanger()
+    {
+        yield return new WaitForSeconds(5);
+        ehDangerAllowed = true;
+    }
+
     void Start()
     {
         animator = agent.GetComponent<Animator>();
@@ -21,6 +39,13 @@ public class Visor : MonoBehaviour
         //Debug.Log(animator.GetBool("viendoJugador"));
         animator.SetFloat("distanciaJugador", (agent.transform.position - agentGarcia.transform.position).magnitude );
         //Debug.Log(animator.GetFloat("distanciaJugador"));
+
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Buscar") && ehConfusionAllowed && !ehDanger.isPlaying)
+        {
+            /*ehConfusion.Play();
+            ehConfusionAllowed = false;
+            StartCoroutine(allowEhConfusion());*/
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -50,7 +75,12 @@ public class Visor : MonoBehaviour
             }
 
             if(hit.collider.gameObject.tag.Equals("Agent Garcia")){
-
+                if (!animator.GetBool("viendoJugador") && ehDangerAllowed)
+                {
+                    ehDanger.Play();
+                    ehDangerAllowed = false;
+                    StartCoroutine(allowEhDanger());
+                }
                 animator.SetBool("esperando", false);
                 animator.SetBool("viendoJugador", true);
                 animator.SetTrigger("aPerseguir");
@@ -72,6 +102,12 @@ public class Visor : MonoBehaviour
             animator.SetBool("esperando", false);
             animator.SetBool("viendoJugador", false);
             animator.ResetTrigger("aPerseguir");
+            if (ehConfusionAllowed && !ehDanger.isPlaying)
+            {
+                /*ehConfusion.Play();
+                ehConfusionAllowed = false;
+                StartCoroutine(allowEhConfusion());*/
+            }
         }
     }
 }

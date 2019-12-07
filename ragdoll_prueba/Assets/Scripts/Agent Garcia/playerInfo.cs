@@ -27,7 +27,7 @@ public class playerInfo : MonoBehaviour
     public AudioSource main_music;
     public AudioSource persiguiendo_music;
 
-    public GameObject objPlanking, objStatue, objPuntero, objGorra, objPatos;
+    public GameObject objPlanking, objStatue, objPuntero, objGorra, objPatos, objLlave;
     
 
     // Start is called before the first frame update
@@ -50,6 +50,7 @@ public class playerInfo : MonoBehaviour
         objPuntero.transform.gameObject.SetActive(false);
         objPatos.transform.gameObject.SetActive(false);
         objGorra.transform.gameObject.SetActive(false);
+        objLlave.transform.gameObject.SetActive(false);
 
         if (planking)
         {
@@ -60,17 +61,21 @@ public class playerInfo : MonoBehaviour
         {
             objStatue.transform.gameObject.SetActive(true);
         }
-        else if (PlayerInventory.equipedDAC.Equals("ZAPAPATOS")) 
+        else if (PlayerInventory.equipedDAC == "ZAPAPATOS") 
         {
             objPatos.transform.gameObject.SetActive(true);
         }
-        else if (PlayerInventory.equipedDAC.Equals("ZGHAT"))
+        else if (PlayerInventory.equipedDAC == "ZGHAT")
         {
             objGorra.transform.gameObject.SetActive(true);
         }
-        else if (PlayerInventory.equipedDAC.Equals("Pointer"))
+        else if (PlayerInventory.equipedDAC == "Pointer")
         {
             objPuntero.transform.gameObject.SetActive(true);
+        }
+        else if (PlayerInventory.hasKey)
+        {
+            objLlave.transform.gameObject.SetActive(true);
         }
 
         if (agachado)
