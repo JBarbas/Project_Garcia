@@ -156,9 +156,6 @@ public class DuckBehaviour : MonoBehaviour
                 anim.SetBool("jump", false);
                 anim.SetFloat("speed", 1f);
             }
-
         }
-
     }
-
 }

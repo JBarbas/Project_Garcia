@@ -37,6 +37,7 @@ public class playerInfo : MonoBehaviour
     void Start()
     {
         state = "safe";
+        PlayerInventory.equipedDAC = "none";
     }
 
     // Update is called once per frame

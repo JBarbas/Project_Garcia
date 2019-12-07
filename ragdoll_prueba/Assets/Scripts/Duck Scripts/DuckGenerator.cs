@@ -22,6 +22,7 @@ public class DuckGenerator : MonoBehaviour
 
     // Comprueba que se sigue al jugador
     public bool followPlayer = false;
+    public static bool duckIsNearPlayer;
     
     // Cuenta cuantos patos que siguen al jugador no pueden alcanzar su destino
     public int contactLost = 0;
@@ -48,6 +49,8 @@ public class DuckGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        duckIsNearPlayer = followPlayer;
+
         // Si el jugador usa la tecla interactuar
         if (PlayerInventory.equipedDAC == "ZAPAPATOS")
         {
@@ -159,5 +162,4 @@ public class DuckGenerator : MonoBehaviour
         pos += objective;
         return pos;
     }
-
 }
