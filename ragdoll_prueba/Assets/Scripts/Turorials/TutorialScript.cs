@@ -58,7 +58,7 @@ public class TutorialScript : MonoBehaviour
 
     private void OnLevelWasLoaded(int level)
     {
-        textExit.text = LocalizationManager.instance.getValue("tutExit");
+        textExit.text = I18n.Fields["tutExit"];
 
         // Si se carga el primer nivel por primera vez, se mostrará el tutorial de inicio
         if (SceneManager.GetActiveScene().name == "Nivel1" && !introTutorial)
@@ -74,11 +74,11 @@ public class TutorialScript : MonoBehaviour
     {
         tutorialCanvas.gameObject.SetActive(true);
 
-        title.text = LocalizationManager.instance.getValue("tut" + key + "Title");
+        title.text = I18n.Fields["tut" + key + "Title"];
 
-        text1.text = LocalizationManager.instance.getValue("tut" + key + "1");
-        text2.text = LocalizationManager.instance.getValue("tut" + key + "2");
-        text3.text = LocalizationManager.instance.getValue("tut" + key + "3");
+        text1.text = I18n.Fields["tut" + key + "1"];
+        text2.text = I18n.Fields["tut" + key + "2"];
+        text3.text = I18n.Fields["tut" + key + "3"];
 
         img1.sprite = Resources.Load<Sprite>("TutorialImages/tut" + key + "1");
         img2.sprite = Resources.Load<Sprite>("TutorialImages/tut" + key + "2");

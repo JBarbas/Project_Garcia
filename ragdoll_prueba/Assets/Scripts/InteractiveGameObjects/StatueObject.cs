@@ -47,7 +47,7 @@ public class StatueObject : InteractiveItem
     {
         if (other.gameObject.tag == "Agent Garcia")
         {
-            if (!CharacterController.inStatue) interactionText.text = LocalizationManager.instance.getValue("Statue");
+            if (!CharacterController.inStatue) interactionText.text = I18n.Fields["Statue"];
             if (Input.GetKeyDown(KeyCode.E) && canLeave)
             {
                 onInteract();

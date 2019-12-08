@@ -17,7 +17,7 @@ public class PickUp : InteractiveItem
     {
         if(other.gameObject.tag == "Agent Garcia")
         {
-            interactionText.text = LocalizationManager.instance.getValue(itemName); 
+            interactionText.text = I18n.Fields[itemName]; 
             if (Input.GetKeyDown(KeyCode.E)){
                 onInteract();
             }

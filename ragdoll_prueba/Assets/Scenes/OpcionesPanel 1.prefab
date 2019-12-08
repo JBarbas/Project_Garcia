@@ -323,7 +323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c877811535ee5a4eb485c3c1ed3ad3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextId: tutorials
+  TextId: tutTutorialTitle
   imgTitleO: {fileID: 0}
   imgTitleC: {fileID: 0}
   optionsSprite: {fileID: 0}
@@ -337,16 +337,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 538418925904830471, guid: 0d65564f2cd20e446a24f53072884f8e,
-        type: 3}
-      propertyPath: m_Name
-      value: OpcionesPanel 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 538418925904830471, guid: 0d65564f2cd20e446a24f53072884f8e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 538418925904830520, guid: 0d65564f2cd20e446a24f53072884f8e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -451,6 +441,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 538418925904830471, guid: 0d65564f2cd20e446a24f53072884f8e,
+        type: 3}
+      propertyPath: m_Name
+      value: OpcionesPanel 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 538418925904830471, guid: 0d65564f2cd20e446a24f53072884f8e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 538418927037633805, guid: 0d65564f2cd20e446a24f53072884f8e,
         type: 3}

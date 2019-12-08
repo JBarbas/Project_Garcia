@@ -22,13 +22,13 @@ public class Agacharse : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftControl))
+        if (Input.GetKeyDown(KeyCode.LeftAlt))
         {
             limits.min = -75;
             spring.targetPosition = -40;
             agachado = true;
         }
-        else if (Input.GetKeyUp(KeyCode.LeftControl))
+        else if (Input.GetKeyUp(KeyCode.LeftAlt))
         {
             limits.min = -30;
             spring.targetPosition = 0;

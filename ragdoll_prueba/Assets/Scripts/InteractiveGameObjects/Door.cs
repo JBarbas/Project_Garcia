@@ -27,7 +27,7 @@ public class Door : InteractiveItem
         {
             if ( (PlayerInventory.hasKey || !needsKey))
             {
-                interactionText.text = LocalizationManager.instance.getValue("Door");
+                interactionText.text = I18n.Fields["Door"];
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     onInteract();
@@ -36,7 +36,7 @@ public class Door : InteractiveItem
             }
             else if (needsKey)
             {
-                interactionText.text = LocalizationManager.instance.getValue("NeedKey");
+                interactionText.text = I18n.Fields["NeedKey"];
             }
         }
     }

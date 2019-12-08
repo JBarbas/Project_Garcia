@@ -109,7 +109,7 @@ public class DAC : InteractiveItem
         {
             if (!interacted)
             {
-                interactionText.text = LocalizationManager.instance.getValue(itemName);
+                interactionText.text = I18n.Fields[itemName];
             }
             if (Input.GetKeyDown(KeyCode.E) && canLeave)
             {

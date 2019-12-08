@@ -55,7 +55,7 @@ public class PlankingObject : InteractiveItem
     {
         if (other.gameObject.tag == "Agent Garcia")
         {
-            if (!CharacterController.isPlanking()) interactionText.text = text + " " + itemName;
+            if (!CharacterController.isPlanking()) interactionText.text = I18n.Fields["Planking"];
             if (Input.GetKeyDown(KeyCode.E) && canLeave)
             {
                 onInteract();
