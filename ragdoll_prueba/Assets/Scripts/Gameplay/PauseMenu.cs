@@ -7,7 +7,17 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
 
-    public GameObject pauseMenuUI, gameplayMenuUI, optionsMenuUI;
+    public GameObject pauseMenuUI, gameplayMenuUI, optionsMenuUI, buttonW;
+
+    private void Start()
+    {
+        if (Application.isMobilePlatform)
+        {
+            buttonW.SetActive(true);
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+    }
 
     // Update is called once per frame
     void Update()
@@ -29,8 +39,11 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        if (!Application.isMobilePlatform)
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
         gameplayMenuUI.SetActive(true);
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;

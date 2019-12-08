@@ -58,7 +58,12 @@ public class playerInfo : MonoBehaviour
         objGorra.transform.gameObject.SetActive(false);
         objLlave.transform.gameObject.SetActive(false);
 
-        if (planking)
+        if (PlayerInventory.hasKey)
+        {
+            objLlave.transform.gameObject.SetActive(true);
+
+        }
+        else if (planking)
         {
             objPlanking.transform.gameObject.SetActive(true);
 
@@ -79,11 +84,6 @@ public class playerInfo : MonoBehaviour
         else if (PlayerInventory.equipedDAC == "Pointer")
         {
             objPuntero.transform.gameObject.SetActive(true);
-
-        }
-        else if (PlayerInventory.hasKey)
-        {
-            objLlave.transform.gameObject.SetActive(true);
 
         }
 

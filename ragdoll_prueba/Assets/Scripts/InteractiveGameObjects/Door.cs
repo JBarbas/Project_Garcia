@@ -14,6 +14,10 @@ public class Door : InteractiveItem
         interactionText.text = "";
         GetComponent<Rigidbody>().isKinematic = false;
         GetComponent<Rigidbody>().AddForceAtPosition(-kickForce, GetComponentInParent<Transform>().position + new Vector3(0,1,0));
+        if (needsKey)
+        {
+            PlayerInventory.hasKey = false;
+        }
         
     }
 

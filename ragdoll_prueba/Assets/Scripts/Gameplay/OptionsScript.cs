@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OptionsScript : MonoBehaviour
 {
-    public GameObject pauseMenuUI, gameplayMenuUI, optionsMenuUI;
+    public GameObject pauseMenuUI, gameplayMenuUI, optionsMenuUI, tutorialMenu;
 
     public void LoadPause()
     {
@@ -15,7 +15,12 @@ public class OptionsScript : MonoBehaviour
 
     public void mostrarTutoriales()
     {
+        tutorialMenu.GetComponent<TutorialScript>().showAllTutorials();
+    }
 
+    private void Start()
+    {
+        tutorialMenu = GameObject.FindGameObjectWithTag("tutorialManager");
     }
 
 }

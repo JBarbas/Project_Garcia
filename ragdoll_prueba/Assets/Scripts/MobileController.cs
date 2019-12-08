@@ -6,6 +6,7 @@ public class MobileController : MonoBehaviour
 {
 
     public dirPelvis pelvis;
+    public caminarScript cubeRagdoll;
     public static bool mouseDown;
     public float timeMouseDown;
     public string key;
@@ -13,93 +14,33 @@ public class MobileController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
-    public void downW()
+    public void toggleW()
     {
-        pelvis.setMoveFront(true);
+        pelvis.toggleMoveFront();
+        cubeRagdoll.toggleMoveFront();
     }
-
-    public void upW()
+    public void toggleA()
     {
-        pelvis.setMoveFront(false);
+        pelvis.toggleMoveLeft();
+        cubeRagdoll.toggleMoveLeft();
     }
-
-    public void downS()
+    public void toggleS()
     {
-        pelvis.setMoveBack(true);
+        pelvis.toggleMoveBack();
+        cubeRagdoll.toggleMoveBack();
     }
-
-    public void upS()
+    public void toggleD()
     {
-        pelvis.setMoveBack(false);
-    }
-
-    public void downA()
-    {
-        pelvis.setMoveLeft(true);
-    }
-
-    public void upA()
-    {
-        pelvis.setMoveLeft(false);
-    }
-
-    public void downD()
-    {
-        pelvis.setMoveRight(true);
-    }
-
-    public void upD()
-    {
-        pelvis.setMoveRight(false);
+        pelvis.toggleMoveRight();
+        cubeRagdoll.toggleMoveRight();
     }
 
     void Update()
     {
         if (mouseDown)
             timeMouseDown += Time.deltaTime;
-    }
-
-    void OnPointerDown()
-    {
-        switch (key)
-        {
-            case "w":
-                downW();
-                break;
-            case "a":
-                downA();
-                break;
-            case "s":
-                downS();
-                break;
-            case "d":
-                downD();
-                break;
-            default:
-                break;
-        }
-    }
-    void OnPointerUp()
-    {
-        switch (key)
-        {
-            case "w":
-                upW();
-                break;
-            case "a":
-                upA();
-                break;
-            case "s":
-                upS();
-                break;
-            case "d":
-                upD();
-                break;
-            default:
-                break;
-        }
     }
 }

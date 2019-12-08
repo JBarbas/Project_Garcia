@@ -1,15 +1,148 @@
 ﻿{
-	"items":[
-		{"key":"ZGHAT", "value":"Press E to wear ZG hat"},
-		{"key":"ZAPAPATOS", "value":"Press E to wear DuckShoes"},
-		{"key":"Key Card", "value":"Press E to pick Key Card"},
-		
-		
-		{"key":"Tut1", "value":"Agente, para cumplir su misión deberá adentrarse en los más profundo de los estudios de Zero Gravity."},
-		{"key":"Tut2", "value":"Zero Gravity utiliza un sistema de seguridad muy eficiente, basado en el uso de llaves electrónicas, que habrán sacado de alguno de esos violentos videojuegos"},
-		{"key":"Tut3", "value":"Encuentre estas llaves, agente, y las puertas secretas que llevan a la siguiente zona."},
-		
-		
-		{"key":"test2", "value":"ZG hat"}
-	]
+  "items": [
+    {
+      "key": "currentLang",
+      "value": "English"
+    },
+
+    {
+      "key": "ZGHAT",
+      "value": "Press E to equip yourself with the ZG cap"
+    },
+    {
+      "key": "ZAPAPATOS",
+      "value": "Press E to equip yourself with the DuckShoes"
+    },
+    {
+      "key": "Key Card",
+      "value": "Press E to pick up the electronic card"
+    },
+    {
+      "key": "Pointer",
+      "value": "Press E to pick up the laser pointer"
+    },
+    {
+      "key": "NeedKey",
+      "value": "You need an electronic card to open the door"
+    },
+
+    {
+      "key": "Door",
+      "value": "Press E to open the door"
+    },
+
+
+    {
+      "key": "tutExit",
+      "value": "Press E to close the tutorial"
+    },
+
+    {
+      "key": "tutTutorialTitle",
+      "value": "Tutorials"
+    },
+    {
+      "key": "tutTutorial1",
+      "value": "Agent, if it's your first mission, you may need to refresh your knowledge."
+    },
+    {
+      "key": "tutTutorial2",
+      "value": "Open the pause menu by pressing ESC. From here you can leave the mission, resume it, and access options"
+    },
+    {
+      "key": "tutTutorial3",
+      "value": "We have also made available an access to the tutorials on the options screen, where you may consult the information to overcome your mission. The Unintelligent Agency spares no expenses."
+    },
+
+    {
+      "key": "tutKeyTitle",
+      "value": "About doors and keys..."
+    },
+    {
+      "key": "tutKey1",
+      "value": "Agent, to fulfill your mission, you will have to go deep into the secret offices of Zero Gravity."
+    },
+    {
+      "key": "tutKey2",
+      "value": "Zero Gravity uses a very efficient security system, based on the use of electronic keys, which must have been taken from one of those violent video games."
+    },
+    {
+      "key": "tutKey3",
+      "value": "Locate these keys, agent, and the secret doors that will lead you to the next area."
+    },
+
+    {
+      "key": "tutControlTitle",
+      "value": "Your skills, agent..."
+    },
+    {
+      "key": "tutControl1",
+      "value": "Agent, I know you have been on leave and may need to refresh your capabilities. Move with WASD. Crouch, as you know, with CTRL. Run using SHIFT. Remember to press SPACE to jump..."
+    },
+    {
+      "key": "tutControl2",
+      "value": "Likewise, you can also use the right and left mouse buttons to grab objects within your reach..."
+    },
+    {
+      "key": "tutControl3",
+      "value": "And don't forget, you can throw them wherever you look pressing the Q key. Use it to create distractions."
+    },
+
+    {
+      "key": "tutDACINTTitle",
+      "value": "Devices of Unintelligent CloacKing"
+    },
+    {
+      "key": "tutDACINT1",
+      "value": "To overcome the enemy, you must surprise him by hiding to the naked eye. That's where the DUCK take action."
+    },
+    {
+      "key": "tutDACINT2",
+      "value": "Adopt a pose when you are near a pedestal, the guards will confuse you with the statue that took your place."
+    },
+    {
+      "key": "tutDACINT3",
+      "value": "You will often find yourself in need of hiding in the most conventional places. Do planking on a table and, as far as the guardsare concerned, you will have vanished!"
+    },
+
+    {
+      "key": "tutDACEQTitle",
+      "value": "Equipable Devices of Unintelligent CloacKing"
+    },
+    {
+      "key": "tutDACEQ1",
+      "value": "You will not always be able to rely on the environment, sometimes it will be necessary to use an EQUIPABLE DUCK. Equip yourself with a Zero Gravity's cap, the guards don't know very well who works there and who doesn't, and when they see you with the company cap you will seem someone important to them."
+    },
+    {
+      "key": "tutDACEQ2",
+      "value": "When you cannot avoid capture, if you carry a laser pointer, you may blind the guards and escape."
+    },
+    {
+      "key": "tutDACEQ3",
+      "value": "The DuckShoes are the top-notch in technology. They emit a duck's croaking, which will allow you to take control of a flock of ducks, as long as you move inside their area, as they are very territorial animals. As long as the ducks follow you, you will be invisible to the eyes of the enemies."
+    },
+
+    {
+      "key": "tutENETitle",
+      "value": "The enemy..."
+    },
+    {
+      "key": "tutENE1",
+      "value": "ZG guards are simple fellows hired through front companies. They do not know very well what they do there, nor if they get paid, and this is why they are always in a bad mood. Pay attention to your movements, all noise will attract them."
+    },
+    {
+      "key": "tutENE2",
+      "value": "The ZG team, formed by the most diverse, machiavellian and malevolent entities, will also be an obstacle to overcome. They are more effective than the guards, and use special skills that they must have obtained, without a doubt, from one of those violent video games."
+    },
+    {
+      "key": "tutENE3",
+      "value": "Last but not least, be aware of the mastermind behind everything... ¡The patrón!"
+    },
+
+
+
+    {
+      "key": "test2",
+      "value": "ZG cap"
+    }
 }

@@ -13,15 +13,15 @@ public class ScoreMenu : MonoBehaviour
 
     public Text score1, score2, score3;
     private int marcador1, marcador2, marcador3;
-    private int timeStar1N1 = 1000;
-    private int timeStar2N1 = 2000;
-    private int timeStar3N1 = 3000;
-    private int timeStar1N2 = 1000;
-    private int timeStar2N2 = 2000;
-    private int timeStar3N2 = 3000;
-    private int timeStar1N3 = 1000;
-    private int timeStar2N3 = 2000;
-    private int timeStar3N3 = 3000;
+    private int timeStar1N1 = 60;
+    private int timeStar2N1 = 120;
+    private int timeStar3N1 = 180;
+    private int timeStar1N2 = 60;
+    private int timeStar2N2 = 120;
+    private int timeStar3N2 = 180;
+    private int timeStar1N3 = 60;
+    private int timeStar2N3 = 120;
+    private int timeStar3N3 = 180;
 
 
     // Start is called before the first frame update
@@ -31,10 +31,10 @@ public class ScoreMenu : MonoBehaviour
         score1.text = "" + marcador1;
         calcularEstrellas1(marcador1);
         marcador2 = PlayerPrefs.GetInt("puntuacionN2", 0);
-        score1.text = "" + marcador2;
+        score2.text = "" + marcador2;
         calcularEstrellas2(marcador2);
         marcador3 = PlayerPrefs.GetInt("puntuacionN3", 0);
-        score1.text = "" + marcador3;
+        score3.text = "" + marcador3;
         calcularEstrellas3(marcador3);
 
     }

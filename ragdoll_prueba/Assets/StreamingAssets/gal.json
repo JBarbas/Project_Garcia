@@ -1,40 +1,150 @@
 ﻿{
-	"items":[
-		{"key":"currentLang", "value":"Galego"},
-	
-		{"key":"ZGHAT", "value":"Preme E para pór a gorra ZG"},
-		{"key":"ZAPAPATOS", "value":"Preme E para pór os ZapaPatos"},
-		{"key":"Key Card", "value":"Preme E para collela tarxeta electrónica"},
-		
-		
-		
-		{"key":"comic1Dialog1", "value":"AÑO 2019 Un grupo de malévolos estudiantes funda la empresa tapadera Zero Gravity. Mientras fingen desarrollar videojuegos inofensivos, su verdadero propósito es..."},
-		{"key":"comic1Dialog2", "value":"Agente García, su misión, si decide aceptarla, es infiltrarse en sus oficinas y descubrir que están tramando."},
-		{"key":"comic1Dialog3", "value":"Ah... Casi se me olvida, el cerebro criminal detrás de esta operación se hace llamar... PATRÓN."},
-		{"key":"comic1Dialog4", "value":"Tenga cuidado, agente."},
-		{"key":"comic1Ono1", "value":"¡DOMINAR EL MUNDO!"},
+  "items": [
+    {
+      "key": "currentLang",
+      "value": "Galego"
+    },
 
-		
-		
-		{"key":"tutExit", "value":"Presiona E para cerrar el tutorial"},
-		
-		{"key":"tutTutorialTitle", "value":"Tutoriales"},
-		{"key":"tutTutorial1", "value":"Agente, si es su primera misión, tal vez necesite refrescar sus conocimientos."},
-		{"key":"tutTutorial2", "value":"Dirígase al menú de pausa pulsando ESC. Desde aquí podrá abandonar la misión, proseguirla, y acceder a opciones."},
-		{"key":"tutTutorial3", "value":"También hemos puesto a su disposición un menú de tutoriales donde podrá consultar la información para superar su misión. La Unintelligent Agency no repara en gastos."},
+    {
+      "key": "ZGHAT",
+      "value": "Preme E para pór a gorra ZG"
+    },
+    {
+      "key": "ZAPAPATOS",
+      "value": "Preme E para pór os ZapaPatos"
+    },
+    {
+      "key": "Key Card",
+      "value": "Preme E para collela tarxeta electrónica"
+    },
+    {
+      "key": "Pointer",
+      "value": "Preme E para collelo punteiro laser"
+    },
+    {
+      "key": "NeedKey",
+      "value": "Precisas unha tarxeta electrónica para abrila porta"
+    },
 
-		{"key":"tutKeyTitle", "value":"Sobre puertas y llaves..."},
-		{"key":"tutKey1", "value":"Agente, para cumplir su misión, deberá adentrarse en lo más profundo de las oficinas secretas de Zero Gravity."},
-		{"key":"tutKey2", "value":"Zero Gravity utiliza un sistema de seguridad muy eficiente, basado en el uso de llaves electrónicas, que habrán sacado de alguno de esos violentos videojuegos."},
-		{"key":"tutKey3", "value":"Encuentre éstas llaves, agente, y las puertas secretas que le llevarán a la siguiente zona."},
-		
-		{"key":"tutControlTitle", "value":"Tus habilidades, agente..."},
-		{"key":"tutControl1", "value":"Agente, se que ha estado de permiso y tal vez necesite refrescar sus capacidades. Muévase con WASD. Agáchese como usted sabe con CTRL. Corra usando SHIFT. Recuerde usar ESPACIO para saltar..."},
-		{"key":"tutControl2", "value":"Así mismo, podrá usar los botones derecho e izquierdo del ratón para agarrar objetos a su alcance..."},
-		{"key":"tutControl3", "value":"Y no lo olvide, podrá arrojarlos allá dónde mire usando la tecla Q. Utilízelo para crear distracciones."},
-		
-		
-		
-		{"key":"test2", "value":"gorra ZG"}
-	]
+
+    {
+      "key": "Door",
+      "value": "Preme E para abrila porta"
+    },
+
+
+    {
+      "key": "tutExit",
+      "value": "Presiona E para fechar o tutorial"
+    },
+
+    {
+      "key": "tutTutorialTitle",
+      "value": "Tutoriais"
+    },
+    {
+      "key": "tutTutorial1",
+      "value": "Axente, se é a súa primeira misión, tal vez precise refrescalos seus coñecementos."
+    },
+    {
+      "key": "tutTutorial2",
+      "value": "Diríxase ao menú de pausa premendo ESC. Dende aquí poderá abandonala misión, proseguila, e acceder a opcións."
+    },
+    {
+      "key": "tutTutorial3",
+      "value": "Tamén puxemos a súa disposición tutoriais dende o menú de opcións, onde poderá consultala información pra superar a súa misión. A Unintelligent Agency non repara en gastos."
+    },
+
+    {
+      "key": "tutKeyTitle",
+      "value": "Sobre portas e chaves..."
+    },
+    {
+      "key": "tutKey1",
+      "value": "Axente, para cumplila súa misión, deberá adentrarse no máis profundo das oficinas secretas de Zero Gravity."
+    },
+    {
+      "key": "tutKey2",
+      "value": "Zero Gravity emprega un sistema de seguridade moi eficiente, basado no uso de chaves electrónicas, que sacarían dalgún disos violentos videoxogos."
+    },
+    {
+      "key": "tutKey3",
+      "value": "Atope éstas chaves, axente, e as portas secretas que lle levarán á seguinte zona."
+    },
+
+    {
+      "key": "tutControlTitle",
+      "value": "As túas habilidades, axente..."
+    },
+    {
+      "key": "tutControl1",
+      "value": "Axente, sei que estivo de permiso e tal vez precise refrescalas súas capacidades. Móvase con WASD. Agáchese como vostede sabe con CTRL. Corra usando SHIFT. Recorde usar ESPACIO pra saltar..."
+    },
+    {
+      "key": "tutControl2",
+      "value": "Así mesmo, poderá usalos botóns dereito e esquerdo do rato pra agarrar obxetos ao seu alcance..."
+    },
+    {
+      "key": "tutControl3",
+      "value": "E non o olvide, poderá arroxalos alá ónde mire premendo a tecra Q. Emprégeo pra crear distraccións."
+    },
+
+    {
+      "key": "tutDACINTTitle",
+      "value": "Dispositivos Absurdos de Camufraxe interactivos"
+    },
+    {
+      "key": "tutDACINT1",
+      "value": "Pra superalo inimigo, debe sorprenderlle ocultándose a simple vista. Ahí é onde entran en acción os DAC."
+    },
+    {
+      "key": "tutDACINT2",
+      "value": "Adopte unha pose cando esté cerca dun pedestal, os gardas lle confundirán ca estatua que ocupaba o seu lugar."
+    },
+    {
+      "key": "tutDACINT3",
+      "value": "A miúdo verase na necesidade de agocharse nos lugares máis convencionais. Faga planking sobre unha mesa e para os gardas, ¡vosstede teráse esfumado!"
+    },
+
+    {
+      "key": "tutDACEQTitle",
+      "value": "Dispositivos Absurdos de Camufraxe equipables"
+    },
+    {
+      "key": "tutDACEQ1",
+      "value": "Non sempre poderá contar co entorno, as veces será preciso empregar un DAC EQUIPABLE. Póñase unha gorra de Zero Gravity, os gardas non saben moi ben quen trabaja alí e quen non, e cando lle vexan ca gorra da empresa lles parecerá alguén importante."
+    },
+    {
+      "key": "tutDACEQ2",
+      "value": "Cando non poda evitala captura, se leva consigo un Punteiro láser, poderá cegarlos gardas e escapar."
+    },
+    {
+      "key": "tutDACEQ3",
+      "value": "Os Zapapatos son o non vai máis tecnológico. Emiten un graznido de pato, que lle permitirá tomalo control dunha bandada de patos, sempre que se mova na súa zona, pois son animais moi territoriais. Namentres os patos lle sigan, será invisible a ollos inimigos."
+    },
+
+    {
+      "key": "tutENETitle",
+      "value": "O inimigo..."
+    },
+    {
+      "key": "tutENE1",
+      "value": "Os gardas de ZG son simples bolseiros contratados mediante empresas tapadeira. Non saben moi ben que fan ahi, nen se cobran, e por iso sempre están de mal humor. Atento aos seus movementos, todo ruído atraeralles."
+    },
+    {
+      "key": "tutENE2",
+      "value": "O equipo de ZG, formado polos máis variopintos, maquiavélicos e malévolos entes, tamén será un obstáculo a superar. Son máis eficaces que os gardas, e empregan habilidades especiais que terán aprendido, sen duda, dun disos violentos videoxogos."
+    },
+    {
+      "key": "tutENE3",
+      "value": "Por último, e non menos importante, esté atento ao cerebro criminal detrás de todo... ¡O patrón!"
+    },
+
+
+
+    {
+      "key": "test2",
+      "value": "gorra ZG"
+    }
+  ]
 }

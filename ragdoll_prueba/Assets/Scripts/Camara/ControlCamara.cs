@@ -22,6 +22,7 @@ public class ControlCamara : MonoBehaviour {
 	void Start () {
         AlturaCam = PosCam.y;
         Screen.lockCursor = true;
+        ZoomActual = 0.15f;
         
 	}
 	

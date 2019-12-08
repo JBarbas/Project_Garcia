@@ -1527,6 +1527,7 @@ MonoBehaviour:
   pauseMenuUI: {fileID: 432092429015184677}
   gameplayMenuUI: {fileID: 432092427513473530}
   optionsMenuUI: {fileID: 195876806089365417}
+  tutorialMenu: {fileID: 0}
 --- !u!114 &7186242366831304333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4768,16 +4769,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 432092428390952644}
     m_Modifications:
-    - target: {fileID: 4809091149878739929, guid: e6149946852fcd443957b7d2eae8b402,
-        type: 3}
-      propertyPath: m_Name
-      value: OpcionesPanel 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4809091149878739929, guid: e6149946852fcd443957b7d2eae8b402,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4809091149878739942, guid: e6149946852fcd443957b7d2eae8b402,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4883,6 +4874,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4809091149878739929, guid: e6149946852fcd443957b7d2eae8b402,
+        type: 3}
+      propertyPath: m_Name
+      value: OpcionesPanel 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4809091149878739929, guid: e6149946852fcd443957b7d2eae8b402,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4809091149913014278, guid: e6149946852fcd443957b7d2eae8b402,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -4902,6 +4903,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4809091148862994131, guid: e6149946852fcd443957b7d2eae8b402,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 432092428390952647}
+    - target: {fileID: 4809091148862994131, guid: e6149946852fcd443957b7d2eae8b402,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Resume
+      objectReference: {fileID: 0}
+    - target: {fileID: 8159687448338078071, guid: e6149946852fcd443957b7d2eae8b402,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8014438937586277839}
+    - target: {fileID: 8159687448338078071, guid: e6149946852fcd443957b7d2eae8b402,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: mostrarTutoriales
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6149946852fcd443957b7d2eae8b402, type: 3}

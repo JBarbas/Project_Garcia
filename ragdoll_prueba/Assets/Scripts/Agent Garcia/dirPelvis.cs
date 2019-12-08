@@ -61,21 +61,21 @@ public class dirPelvis : MonoBehaviour
         this.planking = planking;
     }
 
-    public void setMoveFront (bool move)
+    public void toggleMoveFront()
     {
-        this.moveFront = move;
+        this.moveFront = !moveFront;
     }
-    public void setMoveBack (bool move)
+    public void toggleMoveBack()
     {
-        this.moveBack = move;
+        this.moveBack = !moveBack;
     }
-    public void setMoveLeft (bool move)
+    public void toggleMoveLeft()
     {
-        this.moveLeft = move;
+        this.moveLeft = !moveLeft;
     }
-    public void setMoveRight (bool move)
+    public void toggleMoveRight()
     {
-        this.moveRight = move;
+        this.moveRight = !moveRight;
     }
 
     IEnumerator RotatePelvis(float targetRotation)
@@ -213,6 +213,15 @@ public class dirPelvis : MonoBehaviour
             up = speedStairs;
         }
         if (running)
+        {
+            rb.AddForce(new Vector3(-transform.forward.x, up, -transform.forward.z) * runSpeed);
+            if (!runningSound.isPlaying)
+            {
+                runningSound.Play();
+                walkingSound.Stop();
+            }
+        }
+        else if (moveFront || moveLeft || moveBack || moveRight && Application.isMobilePlatform)
         {
             rb.AddForce(new Vector3(-transform.forward.x, up, -transform.forward.z) * runSpeed);
             if (!runningSound.isPlaying)

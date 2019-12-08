@@ -1,32 +1,149 @@
-﻿{
+{
   "items": [
     {
+      "key": "currentLang",
+      "value": "Español"
+    },
+
+    {
       "key": "ZGHAT",
-      "value": "Pulsa E para equipar la gorra ZG"
+      "value": "Presiona E para ponerte la gorra ZG"
     },
     {
       "key": "ZAPAPATOS",
-      "value": "Pulsa E para equipar los ZapaPatos"
+      "value": "Presiona E para ponerte los ZapaPatos"
     },
     {
       "key": "Key Card",
-      "value": "Pulsa E para coger la llave electrónica"
+      "value": "Presiona E para coger la tarjeta electrónica"
     },
     {
-      "key": "test2",
-      "value": "gorra ZG"
-    },
-    {
-      "key": "Door",
-      "value": "Pulsa E para abrir la puerta"
+      "key": "Pointer",
+      "value": "Presiona E para coger el puntero laser"
     },
     {
       "key": "NeedKey",
-      "value": "Necesitas una llave para abrir la puerta"
+      "value": "Necesitas una tarjeta electrónica para abrir la puerta"
+    },
+
+    {
+      "key": "Door",
+      "value": "Presiona E para abrir la puerta"
+    },
+
+
+    {
+      "key": "tutExit",
+      "value": "Presiona E para cerrar el tutorial"
+    },
+
+    {
+      "key": "tutTutorialTitle",
+      "value": "Tutoriales"
     },
     {
-      "key": "Statue",
-      "value": "Presiona E para hacer la estatua"
+      "key": "tutTutorial1",
+      "value": "Agente, si es su primera misión, tal vez necesite refrescar sus conocimientos."
+    },
+    {
+      "key": "tutTutorial2",
+      "value": "Dirígase al menú de pausa pulsando ESC. Desde aquí podrá abandonar la misión, proseguirla, y acceder a opciones."
+    },
+    {
+      "key": "tutTutorial3",
+      "value": "También hemos puesto a su disposición tutoriales en el menú de opciones, donde podrá consultar la información para superar su misión. La Unintelligent Agency no repara en gastos."
+    },
+
+    {
+      "key": "tutKeyTitle",
+      "value": "Sobre puertas y llaves..."
+    },
+    {
+      "key": "tutKey1",
+      "value": "Agente, para cumplir su misión, deberá adentrarse en lo más profundo de las oficinas secretas de Zero Gravity."
+    },
+    {
+      "key": "tutKey2",
+      "value": "Zero Gravity utiliza un sistema de seguridad muy eficiente, basado en el uso de llaves electrónicas, que habrán sacado de alguno de esos violentos videojuegos."
+    },
+    {
+      "key": "tutKey3",
+      "value": "Encuentre éstas llaves, agente, y las puertas secretas que le llevarán a la siguiente zona."
+    },
+
+    {
+      "key": "tutControlTitle",
+      "value": "Tus habilidades, agente..."
+    },
+    {
+      "key": "tutControl1",
+      "value": "Agente, se que ha estado de permiso y tal vez necesite refrescar sus capacidades. Muévase con WASD. Agáchese como usted sabe con CTRL. Corra usando SHIFT. Recuerde usar ESPACIO para saltar..."
+    },
+    {
+      "key": "tutControl2",
+      "value": "Así mismo, podrá usar los botones derecho e izquierdo del ratón para agarrar objetos a su alcance..."
+    },
+    {
+      "key": "tutControl3",
+      "value": "Y no lo olvide, podrá arrojarlos allá dónde mire usando la tecla Q. Utilízelo para crear distracciones."
+    },
+
+    {
+      "key": "tutDACINTTitle",
+      "value": "Dispositivos Absurdos de Camuflaje interactivos"
+    },
+    {
+      "key": "tutDACINT1",
+      "value": "Para superar al enemigo, debe sorprenderle ocultándose a simple vista. Ahí es donde entran en acción los DAC."
+    },
+    {
+      "key": "tutDACINT2",
+      "value": "Adopte una pose cuando esté cerca de un pedestal, los guardias le confundirán con la estatua que ocupaba su lugar."
+    },
+    {
+      "key": "tutDACINT3",
+      "value": "A menudo se verá en necesidad de esconderse en los lugares más convencionales. Haga planking sobre una mesa y para los guardias, ¡usted se habrá esfumado!"
+    },
+
+    {
+      "key": "tutDACEQTitle",
+      "value": "Dispositivos Absurdos de Camuflaje equipables"
+    },
+    {
+      "key": "tutDACEQ1",
+      "value": "No siempre podrá contar con el entorno, a veces será necesario usar un DAC EQUIPABLE. Póngase una gorra de Zero Gravity, los guardias no saben muy bien quien trabaja allí y quien no, y cuando le vean con la gorra de la empresa les parecerá alguien importante."
+    },
+    {
+      "key": "tutDACEQ2",
+      "value": "Cuando no pueda evitar la captura, si lleva consigo un Puntero láser, podrá cegar a los guardias y escapar."
+    },
+    {
+      "key": "tutDACEQ3",
+      "value": "Los Zapapatos son el no va más tecnológico. Emiten un graznido de pato, que le permitirá tomar el control de una bandada de patos, siempre que se mueva en su zona, pues son animales muy territoriales. Mientras los patos le sigan, será invisible a ojos enemigos."
+    },
+
+    {
+      "key": "tutENETitle",
+      "value": "El enemigo..."
+    },
+    {
+      "key": "tutENE1",
+      "value": "Los guardias de ZG son simples becarios contratados mediante empresas tapadera. No saben muy bien que hacen ahi, ni si cobran, y por eso siempre están de mal humor. Atento a sus movimientos, todo ruído les atraerá."
+    },
+    {
+      "key": "tutENE2",
+      "value": "El equipo de ZG, formado por los más variopintos, maquiavélicos y malévolos entes, también serán un obstáculo a superar. Son más eficaces que los guardias, y utilizan habilidades especiales que habrán obtenido, sin duda, de uno de esos violentos videojuegos."
+    },
+    {
+      "key": "tutENE3",
+      "value": "Por último, y no menos importante, esté atento al cerebro criminal detrás de todo... ¡El patrón!"
+    },
+
+
+
+    {
+      "key": "test2",
+      "value": "gorra ZG"
     }
   ]
 }

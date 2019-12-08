@@ -27,6 +27,7 @@ public class TutorialScript : MonoBehaviour
 
     private List<string> startingTutorials;
     private int currentStartingTutorial = 0;
+    private bool doNotResume;
 
 
     //Comprobacion de si ya se ha visto el tutorial
@@ -45,11 +46,14 @@ public class TutorialScript : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
         tutorialCanvas.gameObject.SetActive(false);
 
-        // Inicializamos la lista de tutoriales iniciales
+        // Inicializamos la lista de tutoriales
         startingTutorials = new List<string>();
 
         startingTutorials.Add("Control");
         startingTutorials.Add("Key");
+        startingTutorials.Add("DACINT");
+        startingTutorials.Add("DACEQ");
+        startingTutorials.Add("ENE");
     }
 
     private void OnLevelWasLoaded(int level)
@@ -90,7 +94,10 @@ public class TutorialScript : MonoBehaviour
         {
             tutorialOpen = false;
             tutorialCanvas.gameObject.SetActive(false);
-            this.resume();
+            if(!doNotResume)
+                this.resume();
+            doNotResume = false;
+            currentStartingTutorial = 0;
         }
         // Si todavía quedan tutoriales por ver
         else if(tutorialHasNext && Input.GetKeyDown(KeyCode.E))
@@ -103,6 +110,13 @@ public class TutorialScript : MonoBehaviour
             }
             
         }
+    }
+
+    public void showAllTutorials()
+    {
+        doNotResume = true;
+        tutorialHasNext = true;
+        loadTutorial(startingTutorials[currentStartingTutorial]);
     }
 
     // Se reanuda el juego
@@ -122,4 +136,5 @@ public class TutorialScript : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 0f;
     }
+
 }
